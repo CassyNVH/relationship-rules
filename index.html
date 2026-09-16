@@ -37,6 +37,14 @@ h1{font-size:clamp(50px,14vw,94px);line-height:.88;letter-spacing:-.07em;margin:
 
 button,.opt,.primary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(32,197,99,.18);cursor:pointer;position:relative;z-index:2}
 button:disabled{pointer-events:none}
+
+.opt.selected,.choice.selected,.check.selected{
+  background:#eafff2 !important;
+  border-color:#20c563 !important;
+  color:#111 !important;
+  box-shadow:0 0 0 2px rgba(32,197,99,.08) inset;
+}
+button:active{transform:scale(.97)}
 </style>
 </head>
 <body>
@@ -147,6 +155,98 @@ button:disabled{pointer-events:none}
 <div class="terms">Terms & Conditions применяются к обеим сторонам.<br>Люди обновляются. Поэтому разговариваем.<br><br>OFFICIALLY ❤️</div></div>
 </div>
 
+
+<script>
+(function () {
+  function byId(id){ return document.getElementById(id); }
+  function pick(btn){
+    var box = btn.closest('.game, .card, .qlite, .qblock') || btn.parentElement;
+    if (box) {
+      var opts = box.querySelectorAll('.opt');
+      for (var i=0;i<opts.length;i++) opts[i].classList.remove('selected');
+    }
+    btn.classList.add('selected');
+    btn.style.background = '#eafff2';
+    btn.style.borderColor = '#20c563';
+  }
+  function result(id, html){
+    var el=byId(id);
+    if(el){ el.innerHTML=html; el.style.display='block'; }
+  }
+
+  document.addEventListener('click', function(e){
+    var b=e.target.closest('button');
+    if(!b) return;
+
+    if(b.id==='matchBtn'){
+      var r=byId('matchReveal');
+      if(r){ r.classList.add('show'); r.style.display='block'; r.style.opacity='1'; }
+      b.textContent='MATCHED ❤️';
+      return;
+    }
+
+    if(b.id==='mergeCute' || b.id==='mergeBtn'){
+      result(b.id==='mergeCute'?'mergeCuteR':'mergeR',
+        '<b>OUR LIFE ❤️</b><br>твоя жизнь + моя жизнь + наши люди + наши места + наши планы');
+      b.textContent='ЖИЗНИ СОВМЕЩЕНЫ ❤️';
+      return;
+    }
+
+    if(b.closest('#lucifer2') || b.closest('#lucifer')){
+      pick(b);
+      result(b.closest('#lucifer2')?'lucifer2R':'luciferR',
+        '<b>ЛЮЦИФЕР ADDED 🐈‍⬛ ✓</b><br>вариантов всё равно не было');
+      return;
+    }
+
+    if(b.closest('#flatCute')){
+      pick(b);
+      var t=b.textContent.trim();
+      var msg=t.indexOf('однуш')>=0
+        ? 'два человека + два кота + две работы + музыка…<br><b>мы там охуеем 😭</b>'
+        : t.indexOf('двуш')>=0
+        ? '<b>вот уже похоже на цивилизацию ❤️</b>'
+        : t.indexOf('евро')>=0
+        ? '<b>минимально разумно ✓</b>'
+        : '<b>финансовый директор одобряет ✓</b>';
+      result('flatCuteR',msg);
+      return;
+    }
+
+    if(b.closest('.qlite')){
+      pick(b);
+      var q=b.closest('.qlite');
+      var rr=q.querySelector('.result');
+      if(rr){
+        rr.innerHTML='<b>ответ принят ✓</b>';
+        rr.style.display='block';
+      }
+      return;
+    }
+
+    if(b.id==='premiumBtn'){
+      b.textContent='ПОДПИСКА ПРОДЛЕНА ❤️';
+      result('premiumR','<b>подписка успешно продлена ❤️</b><br><small>автопродление при взаимном желании сторон 😌</small>');
+      return;
+    }
+
+    if(b.closest('#danyaDetected')){
+      pick(b);
+      result('detectedR', b.dataset.hot
+        ? '<b>EXCELLENT CHOICE 🔥</b><br>LOVE CONNECTION +25%'
+        : '<b>Ксюша довольна ❤️</b>');
+      return;
+    }
+
+    if(b.closest('#takeK')){
+      b.classList.toggle('selected');
+      b.style.background=b.classList.contains('selected')?'#eafff2':'';
+      b.style.borderColor=b.classList.contains('selected')?'#20c563':'';
+      return;
+    }
+  }, true);
+})();
+</script>
 <script>
 const __dummy=document.createElement('div');
 const $=s=>document.querySelector(s)||__dummy, $$=s=>[...document.querySelectorAll(s)], sleep=m=>new Promise(r=>setTimeout(r,m));
