@@ -3,210 +3,146 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#ffffff">
-<title>Ксюша × Даня — OFFICIALLY</title>
+<meta name="theme-color" content="#fff">
+<title>Ксюша × Даня • officially</title>
 <style>
-:root{--ink:#0a0a0a;--paper:#fff;--soft:#f4f4f4;--line:#e7e7e7;--muted:#858585;--green:#20c563;--red:#ff3b30}
+:root{--g:#20c563;--r:#ff3b30;--ink:#090909;--mut:#858585;--line:#e8e8e8;--soft:#f5f5f5}
 *{box-sizing:border-box}html{scroll-behavior:smooth;background:#eee}body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif}
-button,textarea{font:inherit}button{-webkit-tap-highlight-color:transparent;cursor:pointer}
-.site{max-width:720px;margin:auto;background:#fff;min-height:100dvh;overflow:hidden}
-.splash{position:fixed;inset:0;z-index:100;background:#080808;color:#fff;display:grid;place-items:center;padding:24px;transition:.35s}
-.notification{width:min(430px,100%);background:#242426;border:1px solid #3d3d40;border-radius:23px;padding:14px 16px;box-shadow:0 24px 70px #0009}
-.notification .top{display:flex;justify-content:space-between;font-size:11px;color:#aaa;margin-bottom:7px}.notification b{display:block;margin-bottom:4px}.notification p{margin:0}
-.hero{min-height:88dvh;padding:34px 22px 46px;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid var(--line)}
-.eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
-h1{font-size:clamp(48px,14vw,92px);line-height:.9;letter-spacing:-.07em;margin:0 0 22px;max-width:680px}h2{font-size:clamp(34px,9vw,58px);line-height:.96;letter-spacing:-.055em;margin:0 0 18px}h3{margin:0 0 8px}
-.lead{font-size:20px;line-height:1.35;max-width:570px;margin:0;color:#303030}.heart{color:var(--red)}
-.cta{align-self:flex-start;border:0;border-radius:999px;background:var(--green);color:#fff;font-weight:800;padding:14px 20px;margin-top:28px}
-section{padding:72px 22px;border-bottom:1px solid var(--line)}.copy{font-size:18px;line-height:1.45;max-width:610px}.copy p{margin:0 0 15px}.bigquote{font-size:clamp(31px,8vw,52px);line-height:1.03;letter-spacing:-.045em;font-weight:850;margin:26px 0}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}.card{border:1px solid var(--line);border-radius:22px;padding:17px;background:#fff}.card.dark{background:#0a0a0a;color:#fff;border-color:#0a0a0a}.card.green{background:var(--green);color:#fff;border-color:var(--green)}.card .tiny{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.dark .tiny,.green .tiny{color:#ffffffaa}.card p{margin:8px 0 0;line-height:1.35}
-.full{grid-column:1/-1}.pillbox{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.pill{border:1px solid #ddd;background:#fff;border-radius:999px;padding:9px 11px}
-.chatbox{margin:22px 0;border:1px solid var(--line);border-radius:27px;overflow:hidden;background:#fff;box-shadow:0 14px 45px #0000000c}
-.chathead{height:62px;display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--line);background:#fff}.avatar{width:38px;height:38px;border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;font-weight:800}.online{font-size:11px;color:var(--green)}
-.chatbody{padding:16px 12px;background:#fafafa}.row{display:flex;margin:7px 0;animation:up .25s}.row.me{justify-content:flex-end}.bubble{max-width:82%;background:#ededf0;border-radius:18px;border-bottom-left-radius:5px;padding:9px 12px;line-height:1.32}.me .bubble{background:var(--green);color:#fff;border-bottom-left-radius:18px;border-bottom-right-radius:5px}
-.typing{width:55px;height:34px;display:flex;align-items:center;gap:4px;padding:0 12px;background:#ededf0;border-radius:17px}.dot{width:6px;height:6px;border-radius:50%;background:#888;animation:b 1s infinite}.dot:nth-child(2){animation-delay:.15s}.dot:nth-child(3){animation-delay:.3s}
-.chat-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.reply{border:1px solid var(--green);color:#168f48;background:#fff;border-radius:999px;padding:9px 12px;font-weight:700}
-.metric{margin-top:22px}.metric-top{display:flex;justify-content:space-between;font-weight:800}.track{height:10px;border-radius:20px;background:#eee;margin:10px 0;overflow:hidden}.bar{height:100%;width:34%;background:var(--green);transition:.4s}
-.actions{display:flex;gap:7px;flex-wrap:wrap}.action{border:1px solid #ddd;border-radius:999px;padding:9px 11px;background:#fff}.action:disabled{opacity:.55}
-.switchrow{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-top:1px solid var(--line)}.switch{border:0;border-radius:999px;background:#111;color:#fff;padding:8px 11px;font-weight:800}
-.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-top:15px}.day{aspect-ratio:1;display:grid;place-items:center;border:1px solid #e8e8e8;border-radius:10px;font-size:12px}.date{background:var(--green);color:#fff;border-color:var(--green);font-weight:800}
-.achievement{display:flex;gap:9px;align-items:center;padding:11px 0;border-bottom:1px solid #eee}.achievement:last-child{border:0}
-.future{font-size:36px;letter-spacing:.08em;line-height:1.8;text-align:center;margin:15px 0}
-.formcard{margin-top:14px;border:1px solid var(--line);border-radius:20px;padding:15px}.formcard label{font-weight:750;display:block;line-height:1.25}.formcard textarea{width:100%;min-height:78px;border:1px solid #ddd;border-radius:14px;margin-top:10px;padding:11px;outline:0;resize:vertical}.formcard textarea:focus{border-color:var(--green)}
-.save{width:100%;border:0;border-radius:15px;background:var(--green);color:#fff;padding:13px;font-weight:850;margin-top:14px}.saved{text-align:center;color:var(--green);font-weight:800;margin-top:12px}
-.footer{padding:70px 22px 100px;text-align:center}.footer h2{font-size:48px}.terms{font-size:11px;color:var(--muted);margin-top:30px}
-.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,120px);z-index:50;background:#111;color:#fff;border-radius:999px;padding:11px 16px;font-size:13px;transition:.3s;white-space:nowrap}.toast.show{transform:translate(-50%,0)}
-@keyframes b{0%,60%,100%{transform:none}30%{transform:translateY(-4px)}}@keyframes up{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-@media(max-width:480px){.grid{grid-template-columns:1fr}.full{grid-column:auto}section{padding:60px 18px}.hero{padding-left:18px;padding-right:18px}}
+button,textarea{font:inherit}button{cursor:pointer;-webkit-tap-highlight-color:transparent}.site{max-width:720px;margin:auto;overflow:hidden;background:#fff}
+.splash{position:fixed;inset:0;z-index:100;background:#080808;color:#fff;display:grid;place-items:center;padding:24px;transition:.35s}.notif{width:min(430px,100%);padding:14px 16px;border:1px solid #444;border-radius:23px;background:#252527;color:#fff;text-align:left}.nt{display:flex;justify-content:space-between;color:#aaa;font-size:11px;margin-bottom:7px}.notif b{display:block;margin-bottom:4px}.notif p{margin:0}
+.hero,section{padding:70px 20px;border-bottom:1px solid var(--line)}.hero{min-height:90dvh;display:flex;flex-direction:column;justify-content:center}.ey{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--g);font-weight:850;margin-bottom:14px}
+h1{font-size:clamp(50px,14vw,94px);line-height:.88;letter-spacing:-.07em;margin:0 0 23px}h2{font-size:clamp(34px,9vw,58px);line-height:.96;letter-spacing:-.055em;margin:0 0 19px}.lead,.copy{font-size:18px;line-height:1.45;max-width:610px}.lead{font-size:20px;color:#333}.copy p{margin:0 0 14px}.quote{font-size:clamp(30px,8vw,50px);line-height:1.04;letter-spacing:-.045em;font-weight:850;margin:28px 0}.heart{color:var(--r)}
+.cta,.primary{border:0;border-radius:999px;background:var(--g);color:#fff;padding:13px 18px;font-weight:850}.cta{align-self:flex-start;margin-top:25px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}.card{border:1px solid var(--line);border-radius:22px;padding:16px;background:#fff;min-height:112px}.dark{background:#090909;color:#fff;border-color:#090909}.green{background:var(--g);color:#fff;border-color:var(--g)}.tiny{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut)}.dark .tiny,.green .tiny{color:#ffffff99}.card h3{margin:7px 0 5px}.card p{margin:0;line-height:1.35}.full{grid-column:1/-1}
+.game{margin-top:24px;border:1px solid var(--line);border-radius:25px;padding:17px;background:#fff;box-shadow:0 14px 40px #0000000b}.game-title{font-weight:850;margin-bottom:12px}.options{display:flex;gap:8px;flex-wrap:wrap}.opt{border:1px solid #ddd;border-radius:999px;background:#fff;padding:10px 12px}.opt:active{transform:scale(.97)}.result{margin-top:12px;font-size:14px;line-height:1.4}.good{color:#15934a;font-weight:800}
+.chat{margin:24px 0;border:1px solid var(--line);border-radius:26px;overflow:hidden;background:#fafafa}.ch{height:60px;padding:10px 13px;display:flex;align-items:center;gap:9px;background:#fff;border-bottom:1px solid var(--line)}.av{width:38px;height:38px;border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;font-weight:800}.online{font-size:11px;color:var(--g)}.cb{padding:15px 11px}.row{display:flex;margin:7px 0;animation:up .2s}.row.me{justify-content:flex-end}.bubble{max-width:82%;padding:9px 12px;background:#ededf0;border-radius:18px;border-bottom-left-radius:5px;line-height:1.32}.me .bubble{background:var(--g);color:#fff;border-bottom-left-radius:18px;border-bottom-right-radius:5px}
+.typing{width:55px;height:34px;padding:0 12px;display:flex;align-items:center;gap:4px;background:#ededf0;border-radius:17px}.dot{width:6px;height:6px;background:#888;border-radius:50%;animation:b 1s infinite}.dot:nth-child(2){animation-delay:.15s}.dot:nth-child(3){animation-delay:.3s}
+.meter{margin-top:22px}.mt{display:flex;justify-content:space-between;font-weight:850}.track{height:10px;background:#eee;border-radius:20px;overflow:hidden;margin:10px 0}.bar{height:100%;width:23%;background:var(--g);transition:.45s}.chips{display:flex;gap:7px;flex-wrap:wrap}.chip{border:1px solid #ddd;border-radius:999px;background:#fff;padding:9px 11px}.chip:disabled{opacity:.5}
+.settings{margin-top:22px;border:1px solid var(--line);border-radius:22px;padding:4px 16px}.set{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}.set:last-child{border:0}.toggle{border:0;border-radius:999px;background:#111;color:#fff;padding:8px 11px;font-weight:850}.on{color:var(--g);font-weight:850}
+.scene{min-height:220px;display:grid;align-content:center;text-align:center}.scene .emoji{font-size:54px}.scene .line{font-size:23px;font-weight:850;margin:10px auto;max-width:480px}.scene .sub{color:var(--mut);line-height:1.4}
+.achievement{position:fixed;z-index:50;left:50%;top:18px;width:min(420px,calc(100% - 28px));transform:translate(-50%,-140px);transition:.35s;background:#111;color:#fff;border-radius:18px;padding:12px 15px;box-shadow:0 14px 50px #0005}.achievement.show{transform:translate(-50%,0)}.achievement small{color:#aaa}
+.progress{position:fixed;z-index:45;bottom:0;left:0;right:0;height:4px;background:#eee}.progress i{display:block;height:100%;width:0;background:var(--g);transition:.2s}
+.wish{font-size:26px;text-align:center;padding:20px 5px}.market{display:grid;grid-template-columns:1fr 1fr;gap:10px}.market .card{min-height:170px}
+.danger{border-color:#ffb8b4}.money{font-size:34px;font-weight:900;text-align:center;margin:15px 0}
+.formstep{display:none}.formstep.active{display:block}.formstep textarea{width:100%;min-height:120px;border:1px solid #ddd;border-radius:17px;padding:12px;outline:0;resize:vertical;margin:12px 0}.formstep textarea:focus{border-color:var(--g)}.stepcount{font-size:12px;color:var(--mut)}
+.final{text-align:center;padding:80px 20px 110px}.final h2{font-size:52px}.terms{font-size:11px;color:var(--mut);margin-top:28px}.hidden{display:none!important}
+@keyframes b{0%,60%,100%{transform:none}30%{transform:translateY(-4px)}}@keyframes up{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}@keyframes shake{0%,100%{transform:none}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}.shake{animation:shake .25s}
+@media(max-width:480px){.grid,.market{grid-template-columns:1fr}.full{grid-column:auto}.hero,section{padding-left:18px;padding-right:18px}}
 </style>
 </head>
 <body>
-<div class="splash" id="splash"><button class="notification" id="open" type="button" style="text-align:left;color:#fff">
-<div class="top"><span>СООБЩЕНИЯ</span><span>сейчас</span></div><b>Ксюша ❤️</b><p>короче я тут сделала одну хуйню</p></button></div>
+<div class="splash" id="splash"><button class="notif" id="open"><div class="nt"><span>СООБЩЕНИЯ</span><span>сейчас</span></div><b>Ксюша ❤️</b><p>короче я тут сделала одну хуйню</p></button></div>
+<div class="achievement" id="ach"><b id="achT">🏆 Achievement unlocked</b><br><small id="achS"></small></div><div class="progress"><i id="prog"></i></div>
 
 <div class="site">
-<header class="hero" id="top">
-<div class="eyebrow">Ksenia × Danya • officially</div>
-<h1>ПРАВИЛА<br>ОТНОШЕНИЙ<br>СО МНОЙ<span class="heart">.</span></h1>
-<p class="lead">Не техническое задание на должность моего парня. Скорее инструкция к человеку, которого ты зачем-то сам забрал в жизнь.</p>
-<button class="cta" onclick="document.querySelector('#why').scrollIntoView()">открыть инструкцию ❤️</button>
-</header>
+<div class="hero"><div class="ey">Ksenia × Danya • officially</div><h1>КАК<br>ЛЮБИТЬ<br>КСЮШУ<span class="heart">.</span></h1><p class="lead">Никакого экзамена на идеального парня. Просто маленькая игра, после которой ты случайно узнаешь, как работает моя голова.</p><button class="cta" onclick="go('why')">начать ❤️</button></div>
 
-<section id="why">
-<div class="eyebrow">00 • сначала важное</div><h2>Зачем я вообще сделала этот сайт?</h2>
-<div class="copy"><p>Я проходила психотерапию, и она очень помогла мне разобраться в себе. Понять, что для меня любовь, безопасность, близость и где проходят мои реальные границы.</p>
-<p>Я тоже ошибалась в отношениях. Иногда реагировала неправильно. Иногда терпела то, что мне не подходило. Иногда сама делала вещи, которые сейчас сделала бы иначе.</p>
-<p><b>Поэтому это не инструкция «как не разозлить Ксюшу».</b> Это скорее карта моего мозга. Чтобы тебе не приходилось угадывать, почему для меня что-то важно.</p></div>
-<div class="grid">
-<div class="card dark"><span class="tiny">KSENIA OS</span><h3>Саморефлексия</h3><p>● online</p></div>
-<div class="card"><span class="tiny">past mistakes</span><h3>Признаны</h3><p>✓ acknowledged</p></div>
-<div class="card"><span class="tiny">anxiety</span><h3>Иногда чудит</h3><p>△ без разрешения</p></div>
-<div class="card green"><span class="tiny">love for Danya</span><h3>Активна</h3><p>● annoyingly active</p></div>
+<section id="why"><div class="ey">00 • disclaimer</div><h2>Я не сошла с ума. Ну, не из-за сайта.</h2>
+<div class="copy"><p>Психотерапия помогла мне понять, что для меня любовь, безопасность, близость и границы. Я тоже ошибалась в отношениях и сейчас многое сделала бы иначе.</p><p>Поэтому это не свод законов. Это карта моего мозга. И если я сама нарушаю то, о чём здесь говорю, ты имеешь полное право мне это сказать.</p></div>
+<div class="grid"><div class="card dark"><span class="tiny">self-awareness</span><h3>ONLINE ●</h3></div><div class="card green"><span class="tiny">love for Danya</span><h3>annoyingly active ❤️</h3></div></div>
+<div class="chat"><div class="ch"><div class="av">К</div><div><b>Ксюша ❤️</b><div class="online">online</div></div></div><div class="cb"><div class="row"><div class="bubble">ты сам меня забрал</div></div><div class="row me"><div class="bubble">куда?</div></div><div class="row"><div class="bubble">в жизнь</div></div><div class="row me"><div class="bubble">реально?</div></div><div class="row"><div class="bubble">реально. officially.</div></div></div></div>
+<p class="quote">Если мы official, то мы действительно official.</p></section>
+
+<section><div class="ey">01 • priority game</div><h2>Куда поставим Ксюшу?</h2><div class="copy"><p>Не первой всегда. Просто не в категорию «если случайно останется время».</p></div>
+<div class="game" id="priority"><div class="game-title">У Дани сегодня:</div><div class="options"><button class="opt">работа</button><button class="opt">учёба</button><button class="opt">студия</button><button class="opt">друзья</button><button class="opt" data-k="1">Ксюша ❤️</button></div><div class="result">Нажми на Ксюшу и найди ей место в реальной жизни.</div></div></section>
+
+<section><div class="ey">02 • love connection</div><h2>Любовь не лежит на депозите.</h2>
+<div class="scene"><div class="emoji">♡</div><div class="line">Почему сегодня 23%?</div><div class="sub">причина засекречена<br>возможно, мне просто хочется внимания<br>расследование продолжается</div></div>
+<div class="meter"><div class="mt"><span>LOVE CONNECTION</span><span id="loveN">23%</span></div><div class="track"><div class="bar" id="loveB"></div></div><div class="chips" id="love"><button class="chip" data-n="22">поцеловать</button><button class="chip" data-n="19">обнять</button><button class="chip" data-n="18">сказать, что я красивая</button><button class="chip" data-n="26">позвать на свидание</button></div><div class="result" id="loveR"></div></div></section>
+
+<section><div class="ey">03 • emergency simulator</div><h2>Ксюше грустно :(</h2>
+<div class="chat"><div class="ch"><div class="av">К</div><div><b>Ксюша ❤️</b><div class="online">online</div></div></div><div class="cb"><div class="row"><div class="bubble">мне сейчас как-то плохо</div></div><div class="options" id="sad"><button class="opt" data-v="hug">спросить, что случилось</button><button class="opt" data-v="busy">я занят, но прочитал. вернусь позже ❤️</button><button class="opt danger" data-v="gone">исчезнуть на 7 часов</button></div><div class="result" id="sadR"></div></div></div>
+<div class="copy"><p>Мне не нужен ответ 24/7. Мне нужна понятность. Пауза можно. Неизвестность нет.</p></div></section>
+
+<section><div class="ey">04 • voice message</div><h2>Небольшой технический тест.</h2><div class="game"><div class="game-title">🎙️ Голосовое сообщение • 0:04</div><button class="primary" id="voice">▶ прослушать</button><div class="result" id="voiceR"></div></div></section>
+
+<section><div class="ey">05 • fan club</div><h2>Мы не артист и фанатка.</h2><p class="quote">Мы фанаты друг друга.</p>
+<div class="game"><div class="game-title">Что сейчас происходит в жизни Ксюши?</div><div class="copy"><p>Напиши три вещи, которыми я сейчас живу. Потому что мне хочется, чтобы тебе было интересно не только то, что я успела рассказать сама.</p></div><textarea id="three" style="width:100%;min-height:100px;border:1px solid #ddd;border-radius:16px;padding:12px" placeholder="1. ...&#10;2. ...&#10;3. ..."></textarea><button class="primary" id="fan" style="margin-top:10px">я знаю свою девушку</button><div class="result" id="fanR"></div></div></section>
+
+<section><div class="ey">06 • date generator</div><h2>Не будь менеджером отношений. Будь мужчиной с планом.</h2>
+<div class="game"><div class="game-title">Собери нам свидание</div><div class="options" id="places"><button class="opt">ресторан</button><button class="opt">кино</button><button class="opt">концерт</button><button class="opt">ночной город</button><button class="opt">сюрприз</button></div><div class="options" id="times" style="margin-top:9px"><button class="opt">на неделе</button><button class="opt">в выходные</button><button class="opt">как можно скорее 😌</button></div><div class="result" id="dateR">Выбери куда и когда.</div></div>
+<div class="copy" style="margin-top:20px"><p>Мне хочется не только переписываться и сидеть дома. Хочу события, места, людей, поездки, воспоминания. И иногда быть рядом с тобой на твоих мероприятиях, знать твоих людей и реально быть частью твоей жизни.</p></div></section>
+
+<section><div class="ey">07 • market status</div><h2>Красивые? Да. На рынке? Нет.</h2>
+<div class="market"><div class="card dark"><span class="tiny">DANYA</span><h3>NOT AVAILABLE ❤️</h3><p>Получает внимание девушек. Всё ещё состоит в отношениях.</p></div><div class="card green"><span class="tiny">KSENIA</span><h3>NOT AVAILABLE ❤️</h3><p>Меня тоже замечают мужчины. Со мной знакомятся. Я всё ещё состою в отношениях.</p></div></div>
+<div class="copy" style="margin-top:22px"><p>Я тоже женщина, и внимание других мужчин никуда не исчезло. Но я не веду себя как холостая, потому что <b>я выбрала отношения с тобой</b>.</p><p>Я не жду, что к тебе перестанут проявлять интерес женщины. Я жду, что ты сам будешь вести себя как мужчина, который уже сделал свой выбор.</p></div>
+<div class="game"><div class="game-title">Проверить свободные варианты</div><button class="primary" id="market">SEARCH</button><div class="result" id="marketR"></div></div></section>
+
+<section><div class="ey">08 • media boy settings</div><h2>Мой медийный мужчина.</h2>
+<div class="settings"><div class="set"><span>быть красивым</span><span class="on">ON</span></div><div class="set"><span>быть талантливым</span><span class="on">ON</span></div><div class="set"><span>мероприятия / работа</span><span class="on">ON</span></div><div class="set"><span>общаться с девушками по работе</span><span class="on">ON</span></div><div class="set"><span>флиртовать с девушками</span><button class="toggle badToggle">OFF</button></div><div class="set"><span>забывать, что твоя девушка тоже красивая</span><button class="toggle" id="forget">???</button></div></div><div class="result" id="mediaR"></div>
+<div class="copy" style="margin-top:22px"><p>Я не хочу контролировать каждый лайк. Мне важно самой чувствовать твоё внимание. Если что-то неоднозначное связано с работой, просто дай контекст, а не пустое место для моего сериала на 14 серий.</p></div></section>
+
+<section><div class="ey">09 • situations</div><h2>Normal / context / nope?</h2>
+<div class="game" id="situ"><div class="scene"><div class="emoji" id="sitE">💬</div><div class="line" id="sitT">Коллега пишет по работе</div></div><div class="options"><button class="opt" data-s="NORMAL">NORMAL</button><button class="opt" data-s="CONTEXT">NEEDS CONTEXT</button><button class="opt" data-s="NOPE">NOPE</button></div><div class="result" id="sitR"></div></div></section>
+
+<section><div class="ey">10 • chemistry</div><h2>Секс начинается не в спальне.</h2><div class="game"><div class="game-title">Собери connection 🔥</div><div class="chips" id="sexChain"><button class="chip">внимание</button><button class="chip">флирт</button><button class="chip">взгляд</button><button class="chip">прикосновения</button><button class="chip">желанность</button></div><div class="result" id="sexR">0 / 5</div></div><div class="copy" style="margin-top:20px"><p>Мне важны страсть и химия, но одной химии недостаточно. Нужны ясность, стабильность, доверие и внимание друг к другу.</p></div></section>
+
+<section><div class="ey">11 • wishlist</div><h2>Сложно ли радовать Ксюшу?</h2>
+<div class="game"><div class="wish">🎁</div><div class="game-title">Что делать, если хочется подарить мне что-нибудь, но ты не знаешь что?</div><div class="options" id="wish"><button class="opt">паниковать</button><button class="opt">три часа листать интернет</button><button class="opt" data-good="1">попросить мой виш-лист</button></div><div class="result" id="wishR"></div></div>
+<div class="game"><div class="game-title">А что вообще хочет Ксюша?</div><div class="options" id="wants"><button class="opt">что-нибудь красивое</button><button class="opt">цветы</button><button class="opt">милую фигню, которую ты увидел и вспомнил обо мне</button></div><div class="result" id="wantsR"></div></div></section>
+
+<section><div class="ey">12 • money</div><h2>Ужин. Принесли счёт.</h2>
+<div class="game"><div class="options" id="money"><button class="opt">Даня</button><button class="opt">Ксюша</button><button class="opt" data-calc="1">50/50 до копейки</button></div><div id="moneyR" class="result"></div></div>
+<div class="copy" style="margin-top:20px"><p>Моя комфортная модель не про математическое деление каждого чека. Когда мужчина зовёт и организует совместный выход, мне нравится, когда он берёт оплату на себя. Если организовала я, могу заплатить сама. Большие общие расходы обсуждаем.</p></div></section>
+
+<section><div class="ey">13 • ksenia logic™</div><h2>Наука, которую не рецензировали.</h2>
+<div class="scene"><div class="line">ты сам захотел увидеться<br>↓<br>значит думал обо мне<br>↓<br>значит скучал<br>↓<br>значит любишь</div><div class="sub">Q.E.D.</div></div><div class="options" style="justify-content:center"><button class="opt" id="logical">логично</button><button class="opt" id="argue">оспорить</button></div></section>
+
+<section><div class="ey">14 • future.exe</div><h2>Тут ничего страшного.</h2><div class="game" style="text-align:center"><button class="primary" id="future" style="background:#111">НЕ НАЖИМАТЬ</button><div id="futureR"></div></div></section>
+
+<section><div class="ey">15 • без шуток</div><h2>А если совсем без приколов.</h2><p class="quote">Мне нравится быть твоей женщиной.</p><div class="copy"><p>Не слабой и не беспомощной. Просто женщиной, которую любят, замечают, хотят, о которой заботятся и рядом с которой мужчина тоже проявляется сам.</p><p>Я хочу быть для тебя поддержкой, интересоваться твоей жизнью, радовать тебя, быть верной, сексуальной, живой, вовлечённой. Я прошу много не потому, что собираюсь давать мало.</p><p>И мне важно, чтобы ты говорил о своих потребностях тоже. Мои чувства и границы не важнее твоих.</p></div></section>
+
+<section id="danya"><div class="ey">16 • final level</div><h2>DANYA OS.</h2><div class="copy"><p>Не копи на меня папку. Если что-то задевает, говори. Я могу поспорить и внутренне открыть Верховный суд, но я не могу исправить проблему, о существовании которой не знаю.</p></div>
+<div id="formSteps"></div><div class="stepcount" id="stepcount"></div></section>
+
+<div class="final"><div class="ey">connection established ●</div><h2>KSENIA<br>↕<br>DANYA <span class="heart">❤️</span></h2><p>Я не прошу читать мои мысли.<br><b>Я прошу слышать меня.</b></p>
+<div class="game"><div class="game-title">Последняя проверка</div><div class="options" style="justify-content:center"><button class="opt" id="food">а кушать будем? 😭</button><button class="opt" id="finalSex">а секс у нас будет? 🤨</button></div><div class="result" id="finalR"></div></div>
+<div class="terms">Terms & Conditions применяются к обеим сторонам.<br>Люди обновляются. Поэтому разговариваем.<br><br>OFFICIALLY ❤️</div></div>
 </div>
-
-<div class="chatbox" id="origin"><div class="chathead"><div class="avatar">К</div><div><b>Ксюша ❤️</b><div class="online">online</div></div></div><div class="chatbody" id="originBody">
-<div class="row"><div class="bubble">ну и вообще</div></div>
-<div class="row"><div class="bubble">ты сам меня забрал</div></div>
-<div class="row me"><div class="bubble">куда?</div></div>
-<div class="row"><div class="bubble">в жизнь</div></div>
-<div class="row me"><div class="bubble">реально?</div></div>
-<div class="row"><div class="bubble">реально. officially.</div></div>
-</div></div>
-<p class="bigquote">Если мы official, то мы действительно official.</p>
-<div class="copy"><p>Не 24/7 вместе. Не контроль. Не растворение друг в друге. Просто я хочу существовать не в отдельной вкладке твоей жизни, а в самой жизни.</p></div>
-</section>
-
-<section>
-<div class="eyebrow">01 • priority</div><h2>Я хочу чувствовать любовь, а не угадывать её.</h2>
-<div class="copy"><p>Мне не нужно быть единственным человеком в твоей жизни. Мне нужно понимать своё место в ней.</p><p>Приоритет для меня не значит «брось работу, учёбу и стань моим домашним животным». Это значит самому находить место для нас, а не вспоминать об отношениях только в случайно свободном окне.</p></div>
-<div class="metric"><div class="metric-top"><span>LOVE CONNECTION</span><span id="loveN">34%</span></div><div class="track"><div class="bar" id="loveBar"></div></div>
-<div class="actions" id="loveActions"><button class="action" data-n="18">обнять</button><button class="action" data-n="20">спросить как я</button><button class="action" data-n="14">сказать тёплое</button><button class="action" data-n="28">предложить встречу</button></div></div>
-<p class="bigquote">Любовь не копится на балансе.</p>
-<div class="copy"><p>Вчерашнее «я тебя люблю» не становится неправдой сегодня. Но оно не заменяет сегодняшнюю близость. Мне нужны маленькие регулярные сигналы связи: слова, внимание, прикосновения, интерес, время и инициатива.</p><p>Не ежедневное доказательство любви в суде. Просто контакт. <span class="heart">❤️</span></p></div>
-</section>
-
-<section>
-<div class="eyebrow">02 • communication</div><h2>Пауза можно. Неизвестность нет.</h2>
-<div class="grid"><div class="card"><span class="tiny">если занят</span><h3>Нормально</h3><p>«Я сейчас занят. Прочитал тебя. Вернусь к разговору позже».</p></div><div class="card dark"><span class="tiny">если исчез</span><h3>Не нормально</h3><p>boyfriend.exe временно недоступен 💀</p></div></div>
-<div class="copy" style="margin-top:22px"><p>Мне не нужен мгновенный ответ 24/7. Но я не хочу оставаться одна с переживанием, пока сложный разговор просто висит в воздухе.</p></div>
-<div class="chatbox"><div class="chathead"><div class="avatar">К</div><div><b>Ксюша ❤️</b><div class="online">печатает...</div></div></div><div class="chatbody">
-<div class="row"><div class="bubble">🎙️ Голосовое сообщение 0:04</div></div>
-<div class="chat-actions"><button class="reply" id="voice">▶ прослушать</button></div><div id="voiceResult"></div>
-</div></div>
-</section>
-
-<section>
-<div class="eyebrow">03 • mutual interest</div><h2>Мы не артист и фанатка.</h2>
-<p class="bigquote">Мы должны быть фанатами друг друга.</p>
-<div class="copy"><p>Мне интересно, чем ты живёшь: проекты, музыка, мысли, что тебя радует и что беспокоит. И мне нужен такой же живой интерес ко мне.</p><p>Спрашивай про мой день, что я пишу, о чём думаю, что меня волнует. Не допрос. Просто любопытство к человеку, которого любишь.</p></div>
-<div class="grid"><div class="card green"><span class="tiny">membership</span><h3>Ксюша → Danya Fan Club</h3><p>ACTIVE ✓</p></div><div class="card dark"><span class="tiny">membership</span><h3>Даня → Ksenia Fan Club</h3><p>ACTIVE ✓</p></div></div>
-</section>
-
-<section>
-<div class="eyebrow">04 • initiative</div><h2>Я не хочу быть менеджером собственных отношений.</h2>
-<div class="copy"><p>Не хочу всегда быть человеком, который спрашивает «увидимся?», «когда?», «куда пойдём?» и потом организует всё сам.</p></div>
-<div class="grid"><div class="card"><span class="tiny">не только дома</span><h3>Нам нужны воспоминания</h3><p>Ресторан, прогулка, кино, концерт, мероприятие, ночной город, поездка, какая-нибудь спонтанная хрень.</p></div><div class="card dark"><span class="tiny">initiative</span><h3>Теперь твоя очередь.</h3><p>Сам придумал. Сам предложил. Сам назначил конкретный день. Сексуально.</p></div></div>
-<div class="calendar"><span class="day">1</span><span class="day">2</span><span class="day">3</span><span class="day">4</span><span class="day">5</span><span class="day">6</span><span class="day">7</span><span class="day">8</span><span class="day">9</span><span class="day">10</span><span class="day">11</span><span class="day">12</span><span class="day date">DATE ❤️</span><span class="day">14</span></div>
-</section>
-
-<section>
-<div class="eyebrow">05 • public & private</div><h2>Media Boy Mode.</h2>
-<div class="copy"><p>Я понимаю, что ты медийный человек. Работа, аудитория, знакомства и девушки вокруг не исчезнут.</p><p>Я не хочу контролировать каждый лайк. Но мне неприятно видеть твоё публичное внимание к другим и при этом самой чувствовать себя незаметной.</p><p>Если что-то выглядит неоднозначно и связано с работой, дай контекст. Не оставляй пустоту, которую мой мозг радостно заполнит сериалом на 14 серий.</p></div>
-<div class="card" style="margin-top:24px"><div class="switchrow" style="border:0"><b>Медийность</b><b style="color:var(--green)">ON</b></div><div class="switchrow"><b>Вести себя как холостой</b><button class="switch" id="single">OFF</button></div><div id="singleMsg" class="small"></div></div>
-<p class="bigquote">Officially means officially.</p>
-<div class="copy"><p>Друзья, работа, обычное общение и профессиональные контакты нормальны. Флирт, романтические подкаты, сексуальный контекст и образ свободного ловеласа уже нет.</p><p>И всё это работает в обе стороны. Какая неожиданная концепция взаимности.</p></div>
-</section>
-
-<section>
-<div class="eyebrow">06 • boundaries</div><h2>Границы без тюрьмы строгого режима.</h2>
-<div class="grid"><div class="card"><span class="tiny">green zone</span><h3>Нормально</h3><p>Друзья, общие компании, работа, обычное человеческое общение.</p></div><div class="card dark"><span class="tiny">red zone</span><h3>Не подходит</h3><p>Флирт, поцелуи, секс, романтические свидания, интимная эмоциональная близость вместо отношений со мной.</p></div><div class="card full"><span class="tiny">exes</span><h3>ARCHIVE ≠ NEW SEASON</h3><p>Прошлое может существовать. Новую эмоциональную вселенную с прошлым строить не надо.</p></div></div>
-</section>
-
-<section>
-<div class="eyebrow">07 • chemistry</div><h2>Химии недостаточно.</h2>
-<div class="pillbox"><span class="pill">🔥 химия</span><span class="pill">ясность</span><span class="pill">стабильность</span><span class="pill">действия</span><span class="pill">выбор друг друга</span><span class="pill">близость</span></div>
-<p class="bigquote">Секс начинается не в спальне.</p>
-<div class="copy"><p>Он начинается с того, как ты смотришь на меня, говоришь со мной, прикасаешься, проявляешь желание. Мне важно чувствовать, что ты хочешь именно меня.</p><p>А хороший секс для меня это страсть + безопасность + желание + внимание к реакциям друг друга.</p></div>
-</section>
-
-<section>
-<div class="eyebrow">08 • support</div><h2>Когда мне плохо, будь рядом со мной.</h2>
-<div class="grid"><div class="card green"><span class="tiny">вариант 1</span><h3>Помочь решить</h3><p>Если проблему можно решить, помоги мне не оставаться с ней одной.</p></div><div class="card"><span class="tiny">вариант 2</span><h3>Просто быть рядом</h3><p>Иногда мне нужен не план спасения мира, а человек рядом.</p></div></div>
-<div class="copy" style="margin-top:22px"><p>Если я тревожусь, не нужно соглашаться со всеми моими страхами. Но «ты опять придумала хуйню» тоже не работает.</p><p><b>Лучше:</b> «Я понимаю, почему тебя это задело. Вот что происходит на самом деле. Я рядом».</p></div>
-</section>
-
-<section>
-<div class="eyebrow">09 • tiny things</div><h2>Мелочи для меня не мелочи.</h2>
-<div class="grid"><div class="card">«доехала?»</div><div class="card">«ты устала?»</div><div class="card">«я возьму»</div><div class="card">цветы без повода 💐</div><div class="card">вкусняшка</div><div class="card">«увидел и вспомнил о тебе»</div></div>
-<p class="bigquote">Мне не обязательно нужен дорогой жест. Мне важно «я подумал о тебе».</p>
-<div class="copy"><p>И да, подарки, цветы и маленькие сюрпризы я люблю. Меня можно подкупить. Просто не только ими. 😌</p></div>
-</section>
-
-<section>
-<div class="eyebrow">10 • money</div><h2>Это отношения, а не бухгалтерия.</h2>
-<div class="copy"><p>Моя комфортная модель не про математическое 50/50 каждого чека. Когда мужчина зовёт и организует совместный выход, мне нравится, когда он берёт оплату на себя.</p><p>Если что-то организовала я, я могу заплатить сама. В общей жизни большие расходы обсуждаются. Я тоже вкладываюсь в отношения, просто не хочу превращать близость в Excel.</p></div>
-</section>
-
-<section>
-<div class="eyebrow">11 • future.exe</div><h2>Только не пугайся.</h2>
-<div class="chatbox"><div class="chathead"><div class="avatar">К</div><div><b>Ксюша ❤️</b><div class="online">печатает...</div></div></div><div class="chatbody">
-<div class="row"><div class="bubble">когда я люблю человека</div></div><div class="row"><div class="bubble">мой мозг иногда случайно планирует следующие 60 лет 😭</div></div><div class="row me"><div class="bubble">...</div></div>
-</div></div>
-<div class="future">🏠 💍 👶 ✈️<br>👗 🤵 🐈 👵🏻👴🏻</div>
-<div class="copy"><p>Даня, спокойно. Дом завтра покупать не надо.</p><p>Это не дедлайн и не требование кольца. Когда я люблю, мне естественно представлять будущее. Для меня серьёзные отношения потенциально ведут к семье.</p></div>
-</section>
-
-<section>
-<div class="eyebrow">12 • what Danya gets</div><h2>Я прошу много не потому, что собираюсь давать мало.</h2>
-<div class="grid"><div class="card dark"><h3>Любовь</h3><p>Не декоративную. Настоящую и включённую.</p></div><div class="card"><h3>Верность</h3><p>Те же правила действуют на меня.</p></div><div class="card"><h3>Интерес</h3><p>К твоей жизни, музыке, идеям и тому, что с тобой происходит.</p></div><div class="card green"><h3>Поддержку</h3><p>Я хочу быть твоим человеком, а не ещё одной задачей.</p></div><div class="card"><h3>Заботу</h3><p>Я тоже замечаю, спрашиваю, помогаю и стараюсь.</p></div><div class="card dark"><h3>Приключения</h3><p>И немного контролируемого хаоса. Ну куда без него.</p></div></div>
-</section>
-
-<section>
-<div class="eyebrow">13 • achievements</div><h2>Boyfriend level up.</h2>
-<div class="card">
-<div class="achievement"><span>🎧</span><div><b>Прослушал голосовое</b><div class="small">редкое древнее искусство</div></div></div>
-<div class="achievement"><span>📅</span><div><b>Назвал конкретную дату встречи</b><div class="small">+100 к привлекательности</div></div></div>
-<div class="achievement"><span>🧠</span><div><b>Не заставил Ксюшу читать мысли</b><div class="small">легендарное достижение</div></div></div>
-<div class="achievement"><span>💐</span><div><b>Сам придумал, как порадовать</b></div></div>
-<div class="achievement"><span>🫂</span><div><b>Не исчез во время сложного разговора</b></div></div>
-<div class="achievement"><span>👥</span><div><b>Впустил девушку в реальную жизнь</b></div></div>
-</div>
-</section>
-
-<section id="danya">
-<div class="eyebrow">14 • plot twist</div><h2>Теперь твоя очередь.</h2>
-<div class="copy"><p>Я могу очень подробно объяснить, как работает мой мозг. Но я не хочу, чтобы отношения строились только вокруг понимания меня.</p><p><b>Мне нужно научиться любить тебя так, как нужно тебе.</b></p><p>Не копи на меня папку. Я не хочу однажды услышать: «вообще-то меня всё это время бесило вот это, это и это, просто я тебе не говорил».</p></div>
-<div id="forms"></div>
-<button class="save" id="save">СОХРАНИТЬ DANYA OS</button><div class="saved" id="saved"></div>
-</section>
-
-<div class="footer">
-<div class="eyebrow">connection established ●</div><h2>KSENIA<br>↕<br>DANYA <span class="heart">❤️</span></h2>
-<p>Я не хочу идеальных отношений.<br>Я хочу тёплые, взаимные и красивые.</p>
-<p><b>Я не прошу читать мои мысли. Я прошу слышать меня.</b></p>
-<div class="chatbox" style="text-align:left"><div class="chathead"><div class="avatar">К</div><div><b>Ксюша ❤️</b><div class="online">online</div></div></div><div class="chatbody" id="finalChat">
-<div class="row"><div class="bubble">ну вот</div></div><div class="row"><div class="bubble">теперь ты немного лучше знаешь, кого именно забрал</div></div>
-<div class="chat-actions"><button class="reply" id="food">а кушать будем? 😭</button><button class="reply" id="sex">а секс у нас будет? 🤨</button></div>
-</div></div>
-<div class="terms">Terms & Conditions применяются к обеим сторонам.<br>Люди, к сожалению, обновляются. Поэтому разговариваем.<br><br>OFFICIALLY ❤️</div>
-</div>
-</div>
-<div class="toast" id="toast"></div>
 
 <script>
-const sleep=m=>new Promise(r=>setTimeout(r,m));
-const toast=t=>{let x=document.querySelector('#toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2200)};
-document.querySelector('#open').onclick=async()=>{let s=document.querySelector('#splash');s.style.opacity=0;setTimeout(()=>s.remove(),350)};
-let love=34;
-document.querySelectorAll('#loveActions .action').forEach(b=>b.onclick=()=>{if(b.disabled)return;b.disabled=true;b.textContent='✓ '+b.textContent;love=Math.min(100,love+Number(b.dataset.n));document.querySelector('#loveN').textContent=love+'%';document.querySelector('#loveBar').style.width=love+'%'});
-document.querySelector('#voice').onclick=async()=>{let box=document.querySelector('#voiceResult');document.querySelector('#voice').disabled=true;box.innerHTML='<div class="typing"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>';await sleep(700);box.innerHTML='<div class="row"><div class="bubble"><b>У ТЕБЯ TELEGRAM PREMIUM НЕ ДЛЯ КРАСИВЫХ СМАЙЛИКОВ 😭</b></div></div>'};
-document.querySelector('#single').onclick=()=>{document.querySelector('#singleMsg').innerHTML='<br><b>Эта функция несовместима с подпиской OFFICIALLY.</b><br>Single mode применяется к обоим аккаунтам.';toast('ДАНЯ, НЕ ПОЗОРЬСЯ 💀')};
-const questions=['Что заставляет тебя чувствовать себя любимым?','Что я делаю такого, что тебя задевает?','Какие у тебя красные флаги в отношениях?','Чего тебе от меня нужно больше? А чего меньше?','Как с тобой лучше разговаривать во время конфликта?','Есть ли что-то, что тебя уже беспокоит, но ты мне не говорил?'];
-let forms=document.querySelector('#forms');questions.forEach((q,i)=>{let d=document.createElement('div');d.className='formcard';d.innerHTML=`<label>${q}</label><textarea data-q="${i}" placeholder="Напиши честно. Я хочу это знать."></textarea>`;forms.append(d)});
-try{let old=JSON.parse(localStorage.getItem('DanyaOS')||'[]');old.forEach((x,i)=>{let t=document.querySelector(`textarea[data-q="${i}"]`);if(t)t.value=x.answer||''})}catch(e){}
-document.querySelector('#save').onclick=()=>{let data=questions.map((q,i)=>({question:q,answer:document.querySelector(`textarea[data-q="${i}"]`).value.trim()}));try{localStorage.setItem('DanyaOS',JSON.stringify(data))}catch(e){}document.querySelector('#saved').textContent='DANYA OS successfully connected ●';toast('ответы сохранены на этом устройстве ❤️')};
-document.querySelector('#food').onclick=()=>{document.querySelector('#food').disabled=true;let b=document.createElement('div');b.className='row me';b.innerHTML='<div class="bubble">конечно</div>';document.querySelector('#finalChat').append(b);toast('правильный ответ ❤️')};
-document.querySelector('#sex').onclick=()=>{document.querySelector('#sex').disabled=true;let b=document.createElement('div');b.className='row me';b.innerHTML='<div class="bubble">да ❤️</div>';document.querySelector('#finalChat').append(b);toast('сначала перечитай «секс начинается не в спальне» 😌')};
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)], sleep=m=>new Promise(r=>setTimeout(r,m));
+function go(id){$('#'+id).scrollIntoView({behavior:'smooth'})}
+function award(t,s=''){let a=$('#ach');$('#achT').textContent='🏆 '+t;$('#achS').textContent=s;a.classList.add('show');setTimeout(()=>a.classList.remove('show'),2300)}
+$('#open').onclick=()=>{let s=$('#splash');s.style.opacity=0;setTimeout(()=>s.remove(),350)};
+window.addEventListener('scroll',()=>{let h=document.documentElement;$('#prog').style.width=(100*h.scrollTop/(h.scrollHeight-h.clientHeight))+'%'});
+
+$('#priority [data-k]').onclick=()=>{let r=$('#priority .result');r.innerHTML='<b>Ксюша добавлена в жизнь ❤️</b><br>Не вместо всего остального. Просто не «если останется время».';award('Не забыл девушку','сложнейшая логистическая операция')};
+
+let love=23;$$('#love .chip').forEach(b=>b.onclick=()=>{b.disabled=true;b.textContent='✓ '+b.textContent;love=Math.min(100,love+Number(b.dataset.n));$('#loveN').textContent=love+'%';$('#loveB').style.width=love+'%';if(love>=90){$('#loveR').innerHTML='<span class="good">CONNECTED ❤️</span><br>вот. видишь. проблема была абсолютно решаемая.';award('Connection restored','причина разрядки всё ещё не установлена')}});
+
+$$('#sad .opt').forEach(b=>b.onclick=async()=>{let r=$('#sadR');if(b.dataset.v==='gone'){r.innerHTML='<div class="typing"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>';await sleep(700);r.innerHTML='<b>🥺<br><br>Даня<br>ну это буквально худший вариант</b><br><br>Попробуй ещё раз.';b.classList.add('shake')}else{r.innerHTML='<span class="good">Вот. Контакт сохранён ❤️</span><br>'+(b.dataset.v==='busy'?'Даже если занят, я понимаю, что происходит.':'Иногда мне достаточно, чтобы ты просто заметил меня и спросил.');award('Не исчез','boyfriend.exe remains enabled')}});
+
+$('#voice').onclick=async()=>{$('#voiceR').innerHTML='<div class="typing"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>';await sleep(650);$('#voiceR').innerHTML='<b>У ТЕБЯ TELEGRAM PREMIUM НЕ ДЛЯ КРАСИВЫХ СМАЙЛИКОВ 😭</b>';award('Прослушал голосовое','цивилизация спасена')};
+$('#fan').onclick=()=>{if(!$('#three').value.trim()){$('#fanR').textContent='ну напиши хоть что-нибудь 😭';return}$('#fanR').innerHTML='<span class="good">Danya → Ksenia Fan Club: ACTIVE ✓</span>';award('Интересуется своей девушкой')};
+
+let place='',time='';$$('#places .opt').forEach(b=>b.onclick=()=>{place=b.textContent;$$('#places .opt').forEach(x=>x.style.background='');b.style.background='#eafff2';date()});$$('#times .opt').forEach(b=>b.onclick=()=>{time=b.textContent;$$('#times .opt').forEach(x=>x.style.background='');b.style.background='#eafff2';date()});function date(){if(place&&time){$('#dateR').innerHTML='<b>DANYA HAS A PLAN ❤️</b><br>'+place+' • '+time;award('Назвал план свидания','+100 к привлекательности')}}
+
+$('#market').onclick=async()=>{$('#marketR').textContent='searching...';await sleep(650);$('#marketR').innerHTML='<b>0 results found.</b><br>Попробуйте никогда 😌'};
+$$('.badToggle').forEach(b=>b.onclick=()=>{b.textContent='OFF';award('ДАНЯ, НЕ ПОЗОРЬСЯ 💀','эта функция несовместима с OFFICIALLY')});
+$('#forget').onclick=async()=>{$('#mediaR').innerHTML='Даня<br><br>ну я же тоже красивая 😭<br><br><button class="primary" id="fix">исправить вопиющую несправедливость</button>';$('#fix').onclick=()=>{$('#forget').textContent='OFF ✓';$('#mediaR').innerHTML='<span class="good">спасибо. мужчины обучаемы ❤️</span>';award('Заметил свою девушку')}};
+
+const sits=[['💬','Коллега пишет по работе','NORMAL','Работа обнаружена. Паника отменяется.'],['😏','Девушка откровенно флиртует','NOPE','Внимание других людей не проблема. Важна твоя реакция на него.'],['🗂️','Девушка по работе, но ситуация выглядит неоднозначно','CONTEXT','Контекст спасает Ксюшу от сценария на 14 серий.'],['📼','Бывшая хочет снова строить эмоциональную близость','NOPE','ARCHIVE ≠ NEW SEASON.']];
+let si=0;$$('#situ [data-s]').forEach(b=>b.onclick=()=>{let q=sits[si],ok=b.dataset.s===q[2];$('#sitR').innerHTML=(ok?'<span class="good">согласовано ✓</span>':'<b>ммм. интересно 😭</b>')+'<br>'+q[3];setTimeout(()=>{si=(si+1)%sits.length;$('#sitE').textContent=sits[si][0];$('#sitT').textContent=sits[si][1];$('#sitR').textContent=''},1300)});
+
+let sx=0;$$('#sexChain .chip').forEach(b=>b.onclick=()=>{if(b.disabled)return;b.disabled=true;b.textContent='✓ '+b.textContent;sx++;$('#sexR').textContent=sx+' / 5';if(sx===5){$('#sexR').innerHTML='<span class="good">🔥 CONNECTION READY</span>';award('Понял, где начинается секс','спойлер: не с раздевания')}});
+
+$$('#wish .opt').forEach(b=>b.onclick=()=>{if(b.dataset.good){$('#wishR').innerHTML='<b>🎉 НЕВЕРОЯТНО</b><br>У неё буквально есть готовый виш-лист.<br><br><b>Напиши: «Ксюша, скинь мне свой виш-лист» 💌</b>';award('Победил «я не знаю, что подарить»')}else $('#wishR').innerHTML='зачем усложнять жизнь 😭<br>подсказка: <b>у меня реально есть виш-лист</b>'});
+$$('#wants .opt').forEach(b=>b.onclick=()=>{$('#wantsR').innerHTML='<b>Неправильный вопрос.</b><br>Всё зависит от настроения. Я женщина с диапазоном 😌'});
+
+$$('#money .opt').forEach(b=>b.onclick=async()=>{if(b.dataset.calc){$('#moneyR').innerHTML='<div class="money">1 846,50 ₽</div>+ моральный ущерб<br>+ потеря романтики<br>+ комиссия за бухгалтерские услуги';await sleep(700);$('#moneyR').innerHTML+='<div class="money">₽ ДОХУЯ</div><b>убери калькулятор со свидания 😭</b>'}else if(b.textContent==='Даня'){$('#moneyR').innerHTML='<span class="good">романтика сохранена ❤️</span>'}else $('#moneyR').innerHTML='могу. особенно если это моя идея. но это не моя любимая модель 😌'});
+
+$('#argue').onclick=()=>{let b=$('#argue');b.style.position='relative';b.style.transform=`translate(${Math.random()*120-60}px,${Math.random()*60-30}px)`};$('#logical').onclick=()=>award('Признал Ksenia Logic™','наука торжествует');
+
+$('#future').onclick=async()=>{let r=$('#futureR');r.innerHTML='<div class="scene"><div class="emoji">💍</div></div>';await sleep(300);r.innerHTML='<div class="scene"><div class="emoji">💍 🏠 👶 🐈 ✈️</div><div class="line">АААААААА</div><div class="sub">закрой закрой закрой 😭</div></div>';await sleep(1000);r.innerHTML='<div class="copy"><p><b>Спокойно. Это не дедлайн.</b></p><p>Когда я люблю человека, мне естественно представлять будущее рядом с ним: дом, поездки, семью, старость. Это выражение серьёзности, а не требование кольца завтра.</p></div>';award('Открыл future.exe','дом завтра покупать не надо')};
+
+const qs=['Что заставляет тебя чувствовать себя любимым?','Что я делаю такого, что тебя задевает?','Какие у тебя красные флаги?','Чего тебе от меня нужно больше? А чего меньше?','Как с тобой лучше разговаривать во время конфликта?','Есть ли что-то, что тебя уже беспокоит, но ты не говорил?'];let fs=$('#formSteps'),step=0;
+qs.forEach((q,i)=>{let d=document.createElement('div');d.className='formstep'+(i===0?' active':'');d.innerHTML=`<div class="game"><div class="game-title">${q}</div><textarea data-i="${i}" placeholder="Честно. Я хочу это знать."></textarea><button class="primary next">${i===qs.length-1?'CONNECT DANYA OS':'дальше'}</button></div>`;fs.append(d)});
+function stepText(){$('#stepcount').textContent=Math.min(step+1,qs.length)+' / '+qs.length}stepText();
+$$('.next').forEach((b,i)=>b.onclick=()=>{let ta=$(`textarea[data-i="${i}"]`);if(!ta.value.trim()){ta.focus();return}if(i<qs.length-1){$$('.formstep')[i].classList.remove('active');$$('.formstep')[i+1].classList.add('active');step=i+1;stepText()}else{let data=qs.map((q,j)=>({question:q,answer:$(`textarea[data-i="${j}"]`).value.trim()}));try{localStorage.setItem('DanyaOS',JSON.stringify(data))}catch(e){}fs.innerHTML='<div class="game" style="text-align:center"><div style="font-size:48px">❤️</div><h3>DANYA OS successfully connected ●</h3><p>Теперь у меня тоже есть инструкция. Потому что я хочу знать, как правильно любить тебя.</p></div>';$('#stepcount').textContent='';award('Danya OS connected','не копим папку, разговариваем')}});
+try{let old=JSON.parse(localStorage.getItem('DanyaOS')||'[]');old.forEach((x,i)=>{let t=$(`textarea[data-i="${i}"]`);if(t)t.value=x.answer||''})}catch(e){}
+
+$('#food').onclick=()=>{$('#finalR').innerHTML='<b>конечно.</b><br>правильный ответ ❤️'};$('#finalSex').onclick=()=>{$('#finalR').innerHTML='<b>да 😌</b><br>но ты уже знаешь, что секс начинается не в спальне.'};
 </script>
 </body>
 </html>
