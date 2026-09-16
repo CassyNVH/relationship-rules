@@ -14,7 +14,7 @@ button,textarea{font:inherit}button{cursor:pointer;-webkit-tap-highlight-color:t
 h1{font-size:clamp(50px,14vw,94px);line-height:.88;letter-spacing:-.07em;margin:0 0 23px}h2{font-size:clamp(34px,9vw,58px);line-height:.96;letter-spacing:-.055em;margin:0 0 19px}.lead,.copy{font-size:18px;line-height:1.45;max-width:610px}.lead{font-size:20px;color:#333}.copy p{margin:0 0 14px}.quote{font-size:clamp(30px,8vw,50px);line-height:1.04;letter-spacing:-.045em;font-weight:850;margin:28px 0}.heart{color:var(--r)}
 .cta,.primary{border:0;border-radius:999px;background:var(--g);color:#fff;padding:13px 18px;font-weight:850}.cta{align-self:flex-start;margin-top:25px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}.card{border:1px solid var(--line);border-radius:22px;padding:16px;background:#fff;min-height:112px}.dark{background:#090909;color:#fff;border-color:#090909}.green{background:var(--g);color:#fff;border-color:var(--g)}.tiny{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut)}.dark .tiny,.green .tiny{color:#ffffff99}.card h3{margin:7px 0 5px}.card p{margin:0;line-height:1.35}.full{grid-column:1/-1}
-.game{margin-top:24px;border:1px solid var(--line);border-radius:25px;padding:17px;background:#fff;box-shadow:0 14px 40px #0000000b}.game-title{font-weight:850;margin-bottom:12px}.options{display:flex;gap:8px;flex-wrap:wrap}.opt{border:1px solid #ddd;border-radius:999px;background:#fff;padding:10px 12px}.opt:active{transform:scale(.97)}.result{margin-top:12px;font-size:14px;line-height:1.4}.good{color:#15934a;font-weight:800}
+.game{margin-top:24px;border:1px solid var(--line);border-radius:25px;padding:17px;background:#fff;box-shadow:0 14px 40px #0000000b}.game-title{font-weight:850;margin-bottom:12px}.options{display:flex;gap:8px;flex-wrap:wrap}.opt{border:1px solid #ddd;border-radius:999px;background:#fff;padding:10px 12px}.opt:active{transform:scale(.97)}.opt.selected{border-color:var(--g);background:#eafff2;font-weight:800}.result{margin-top:12px;font-size:14px;line-height:1.4}.good{color:#15934a;font-weight:800}
 .chat{margin:24px 0;border:1px solid var(--line);border-radius:26px;overflow:hidden;background:#fafafa}.ch{height:60px;padding:10px 13px;display:flex;align-items:center;gap:9px;background:#fff;border-bottom:1px solid var(--line)}.av{width:38px;height:38px;border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;font-weight:800}.online{font-size:11px;color:var(--g)}.cb{padding:15px 11px}.row{display:flex;margin:7px 0;animation:up .2s}.row.me{justify-content:flex-end}.bubble{max-width:82%;padding:9px 12px;background:#ededf0;border-radius:18px;border-bottom-left-radius:5px;line-height:1.32}.me .bubble{background:var(--g);color:#fff;border-bottom-left-radius:18px;border-bottom-right-radius:5px}
 .typing{width:55px;height:34px;padding:0 12px;display:flex;align-items:center;gap:4px;background:#ededf0;border-radius:17px}.dot{width:6px;height:6px;background:#888;border-radius:50%;animation:b 1s infinite}.dot:nth-child(2){animation-delay:.15s}.dot:nth-child(3){animation-delay:.3s}
 .meter{margin-top:22px}.mt{display:flex;justify-content:space-between;font-weight:850}.track{height:10px;background:#eee;border-radius:20px;overflow:hidden;margin:10px 0}.bar{height:100%;width:23%;background:var(--g);transition:.45s}.chips{display:flex;gap:7px;flex-wrap:wrap}.chip{border:1px solid #ddd;border-radius:999px;background:#fff;padding:9px 11px}.chip:disabled{opacity:.5}
@@ -67,40 +67,238 @@ h1{font-size:clamp(50px,14vw,94px);line-height:.88;letter-spacing:-.07em;margin:
 <div class="game"><div class="game-title">Собери нам свидание</div><div class="options" id="places"><button class="opt">ресторан</button><button class="opt">кино</button><button class="opt">концерт</button><button class="opt">ночной город</button><button class="opt">сюрприз</button></div><div class="options" id="times" style="margin-top:9px"><button class="opt">на неделе</button><button class="opt">в выходные</button><button class="opt">как можно скорее 😌</button></div><div class="result" id="dateR">Выбери куда и когда.</div></div>
 <div class="copy" style="margin-top:20px"><p>Мне хочется не только переписываться и сидеть дома. Хочу события, места, людей, поездки, воспоминания. И иногда быть рядом с тобой на твоих мероприятиях, знать твоих людей и реально быть частью твоей жизни.</p></div></section>
 
-<section><div class="ey">07 • officially</div><h2>Оба красивые. Оба заняты.</h2>
+
+<section id="merge"><div class="ey">07 • merge lives</div><h2>Не две параллельные жизни.</h2>
+<p class="quote">Твоя жизнь + моя жизнь + наша жизнь <span class="heart">❤️</span></p>
+
+<div class="grid">
+  <div class="card"><span class="tiny">DANYA'S LIFE</span><h3>🎓 🎤 💼 👥</h3><p>учёба • музыка • работа • люди • мероприятия • проекты</p></div>
+  <div class="card"><span class="tiny">KSENIA'S LIFE</span><h3>🏢 🎵 👯 📸</h3><p>офис • музыка • мои люди • события • планы • проекты</p></div>
+</div>
+
+<div class="game" id="mergeGame">
+  <div class="game-title">А теперь сделаем одну нормальную вещь</div>
+  <button class="primary" id="mergeBtn">СОВМЕСТИТЬ ЖИЗНИ ❤️</button>
+  <div class="result" id="mergeR"></div>
+</div>
+
+<div class="game">
+  <div class="game-title">Тебя позвали куда-то. Иногда мысль должна быть:</div>
+  <div class="options" id="plusOne">
+    <button class="opt" data-plus="solo">иду и всё</button>
+    <button class="opt" data-plus="ks">а Ксюшу можно взять? 👀</button>
+  </div>
+  <div class="result" id="plusR"></div>
+</div>
+
+<div class="stickers">
+  <span class="sticker">🎟 иногда брать меня с собой</span>
+  <span class="sticker">👥 знакомить со своими</span>
+  <span class="sticker">💬 рассказывать планы</span>
+  <span class="sticker">✨ впускать в проекты</span>
+  <span class="sticker">📸 делать общие воспоминания</span>
+</div>
+
+<div class="note"><b>И это взаимно.</b> Я тоже хочу знакомить тебя со своими, брать с собой, рассказывать, чем живу, и делать для тебя место в моей реальности.</div>
+<div class="copy"><p>Мне не нужно присутствовать везде. Мне важно не чувствовать себя отдельной вкладкой «отношения», которая открывается только в свободный вечер.</p></div>
+</section>
+
+<section id="home"><div class="ey">08 • our home.exe</div><h2>А если мы однажды съедемся? 🏠</h2>
+<div class="note"><b>Спойлер:</b> я хочу. И мне самой от этого одновременно очень классно и немного страшно. Поэтому здесь нет «правильных» ответов. Мне реально интересно, как это видишь ты.</div>
+
+<div class="game qblock" data-q="experience">
+  <div class="game-title">Ты вообще жил с партнёром?</div>
+  <div class="options">
+    <button class="opt choice">да, долго</button><button class="opt choice">да, недолго</button><button class="opt choice">практически жил</button><button class="opt choice">нет</button>
+  </div>
+</div>
+
+<div class="game qblock" data-q="feeling">
+  <div class="game-title">Идея жить со мной тебе…</div>
+  <div class="options">
+    <button class="opt choice">очень нравится ❤️</button><button class="opt choice">нравится, но страшновато</button><button class="opt choice">интересно, но рано</button><button class="opt choice">я пока не думал</button>
+  </div>
+</div>
+
+<div class="game qblock" data-q="when">
+  <div class="game-title">Когда ты примерно это представляешь?</div>
+  <div class="options">
+    <button class="opt choice">до Нового года 🎄</button><button class="opt choice">после Нового года</button><button class="opt choice">весной</button><button class="opt choice">позже</button><button class="opt choice">не знаю, хочу обсудить</button>
+  </div>
+  <div class="result">Никаких неправильных вариантов. Я не стою у двери с чемоданом. Пока.</div>
+</div>
+
+<div class="game multi" data-q="before">
+  <div class="game-title">Что нужно решить ДО съезда? <span class="tiny">можно несколько</span></div>
+  <div class="options">
+    <button class="opt check">💸 деньги</button><button class="opt check">🏠 где жить</button><button class="opt check">🎓 учёбу</button><button class="opt check">💼 работу</button><button class="opt check">🧺 быт</button><button class="opt check">🚪 личное пространство</button><button class="opt check">🧪 тест-драйв пожить вместе</button>
+  </div>
+</div>
+
+<div class="game qblock" data-q="testdrive">
+  <div class="game-title">Тест-драйв совместной жизни?</div>
+  <div class="options">
+    <button class="opt choice">3–4 дня</button><button class="opt choice">неделя</button><button class="opt choice">пара недель</button><button class="opt choice">сразу въехать и разбираться 😭</button>
+  </div>
+</div>
+</section>
+
+<section><div class="ey">09 • apartment configurator</div><h2>Нам явно нужно чуть больше воздуха.</h2>
+<div class="copy"><p>У меня офис и свои проекты. У тебя учёба, работа, музыка и свои проекты. Поэтому квартира должна позволять нам <b>любить друг друга, не сидя друг у друга на голове</b>.</p></div>
+
+<div class="game multi" id="spaceNeed">
+  <div class="game-title">Что должно поместиться?</div>
+  <div class="options">
+    <button class="opt check">🛏 спальня</button><button class="opt check">💻 твоё рабочее место</button><button class="opt check">💻 моё рабочее место</button><button class="opt check">🎤 музыка</button><button class="opt check">🐈🐈‍⬛ два кота</button><button class="opt check">🚪 иногда закрыть дверь</button><button class="opt check">💄 мои баночки</button>
+  </div>
+  <div class="result" id="spaceR">Отмечай. Квартира постепенно дорожает.</div>
+</div>
+
+<div class="game qblock" data-q="flat">
+  <div class="game-title">Что рассматриваем?</div>
+  <div class="options">
+    <button class="opt choice">большая однушка</button><button class="opt choice">евродвушка</button><button class="opt choice">нормальная двушка ❤️</button><button class="opt choice">смотрим по бюджету</button>
+  </div>
+</div>
+
+<div class="game multi" data-q="flatpriority">
+  <div class="game-title">Что для тебя важнее в квартире? <span class="tiny">выбери хоть несколько</span></div>
+  <div class="options">
+    <button class="opt check">площадь</button><button class="opt check">район</button><button class="opt check">цена</button><button class="opt check">ремонт</button><button class="opt check">кухня</button><button class="opt check">рабочее место</button><button class="opt check">транспорт</button><button class="opt check">балкон</button>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="card green"><span class="tiny">минимально разумно</span><h3>евродвушка ✓</h3></div>
+  <div class="card dark"><span class="tiny">моя любимая версия</span><h3>двушка ❤️</h3></div>
+</div>
+</section>
+
+<section><div class="ey">10 • cat merger</div><h2>Два человека. Два кота. Один дом.</h2>
+<div class="grid">
+  <div class="card"><span class="tiny">KSENIA PACKAGE</span><h3>👩🏼 + 🐈</h3><p>Ксюша + Грейс<br><b>Грейс воспитана ✓</b></p></div>
+  <div class="card"><span class="tiny">DANYA PACKAGE</span><h3>👨🏻 + 🐈‍⬛</h3><p>Даня + Люцифер<br><b>Люцифера воспитаем</b></p></div>
+</div>
+
+<div class="game">
+  <div class="game-title">Люцифера забираем?</div>
+  <div class="options" id="lucifer">
+    <button class="opt">естественно</button><button class="opt">естественно, зачем это вопрос</button>
+  </div>
+  <div class="result" id="luciferR"></div>
+</div>
+
+<div class="settings">
+  <div class="set"><span>🧹 поддерживающий клининг</span><b>1× месяц ✓</b></div>
+  <div class="set"><span>🧴 уборка с упором на аллергены</span><b>регулярно ✓</b></div>
+  <div class="set"><span>💸 клининг</span><b>в общие расходы ✓</b></div>
+  <div class="set"><span>🐈 Грейс</span><b>воспитана ✓</b></div>
+  <div class="set"><span>🐈‍⬛ Люцифер</span><b>обучение pending…</b></div>
+</div>
+<div class="note"><b>Про аллергию я помню.</b> Клининг и снижение количества аллергенов закладываем сразу. Это не магическая кнопка «аллергии больше нет», просто я не собираюсь делать вид, что проблемы не существует.</div>
+
+<div class="game"><div class="game-title">Кто главный в квартире?</div><div class="options" id="boss"><button class="opt" data-human="1">Даня</button><button class="opt" data-human="1">Ксюша</button><button class="opt">Грейс</button><button class="opt">Люцифер</button></div><div class="result" id="bossR"></div></div>
+</section>
+
+<section><div class="ey">11 • schedule compatibility</div><h2>Разный график ≠ разная жизнь.</h2>
+<div class="grid">
+  <div class="card"><span class="tiny">KSENIA</span><h3>🏢 OFFICE MODE</h3><p>офис • дорога • свои дела • музыка</p></div>
+  <div class="card dark"><span class="tiny">DANYA</span><h3>🎓 CHAOS MODE</h3><p>учёба • работа • музыка • проекты</p></div>
+</div>
+
+<div class="game"><div class="game-title">«Но у нас же разный график…»</div><div class="options" id="schedule"><button class="opt" data-sch="panic">мы никогда не увидимся 😭</button><button class="opt" data-sch="real">нам не нужно быть вместе 24/7</button></div><div class="result" id="scheduleR"></div></div>
+
+<div class="stickers">
+  <span class="sticker">☀️ иногда утро вместе</span><span class="sticker">💬 списались днём</span><span class="sticker">🍝 пересеклись вечером</span><span class="sticker">💋 встретились дома</span><span class="sticker">🛏 проснулись рядом</span>
+</div>
+
+<div class="game multi" data-q="schedulecomfort">
+  <div class="game-title">Что тебе комфортно при разных графиках?</div>
+  <div class="options">
+    <button class="opt check">вечер вместе</button><button class="opt check">иногда завтракать</button><button class="opt check">1 вечер в неделю только наш</button><button class="opt check">планировать выходные</button><button class="opt check">спокойно переживать дни почти без встреч</button><button class="opt check">писать днём</button>
+  </div>
+</div>
+
+<div class="note"><b>Мне не нужно больше твоих часов.</b> Мне хочется, чтобы между нашими часами появился общий дом. ❤️</div>
+</section>
+
+<section><div class="ey">12 • domestic compatibility</div><h2>А теперь суровая бытовуха.</h2>
+<div class="game"><div class="game-title">Носок лежит РЯДОМ с корзиной.</div><div class="options" id="sock"><button class="opt" data-sock="me">Ксюша поднимет</button><button class="opt" data-sock="him">Даня положит в корзину</button><button class="opt" data-sock="estate">носок получает статус недвижимости</button></div><div class="result" id="sockR"></div></div>
+
+<div class="grid">
+  <div class="card"><span class="tiny">🧦 НОСКИ</span><h3>так уж и быть</h3><p>твои постираю</p></div>
+  <div class="card green"><span class="tiny">🍝 ЕДА</span><h3>голодным не будешь</h3><p>это я могу обещать</p></div>
+  <div class="card"><span class="tiny">🎀 HOME</span><h3>уют будет</h3><p>и какая-нибудь красивая фигня тоже</p></div>
+  <div class="card dark"><span class="tiny">💋 GIRLFRIEND</span><h3>already included</h3><p>условия LOVE CONNECTION применяются</p></div>
+</div>
+
+<div class="game"><div class="game-title">Кто решает, что есть вечером?</div><div class="options" id="dinner"><button class="opt">Даня</button><button class="opt">Ксюша</button><button class="opt" data-real="1">47 минут говорим «мне всё равно, выбирай ты»</button></div><div class="result" id="dinnerR"></div></div>
+</section>
+
+<section><div class="ey">13 • 24 hours with ksenia</div><h2>Просто обычный вторник.</h2>
+<div class="game" id="daySim">
+  <div class="scene"><div class="emoji" id="dayE">☀️</div><div class="line" id="dayT">08:14</div><div class="sub" id="dayS">проснулись рядом • коты уже требуют невозможного</div></div>
+  <button class="primary" id="dayNext">прожить этот день →</button>
+</div>
+
+<div class="grid">
+  <div class="card"><span class="tiny">СЕЙЧАС</span><h3>увидеть Ксюшу</h3><p>найти день → договориться → доехать → потом разъехаться</p></div>
+  <div class="card green"><span class="tiny">HOME VERSION</span><h3>увидеть Ксюшу</h3><p>вернуться домой ❤️</p></div>
+</div>
+
+<p class="quote">Ты больше не приезжаешь ко мне в гости.<br>Ты возвращаешься домой.</p>
+<div class="note">Я не думаю, что совместная жизнь будет бесконечным романтическим монтажом. Мы будем уставать, иногда бесить друг друга и хотеть тишины. Но мне почему-то кажется, что <b>обычная жизнь с тобой будет классной</b>.</div>
+</section>
+
+<section><div class="ey">14 • our home draft</div><h2>Соберём первую версию?</h2>
+<div class="game">
+  <div class="game-title">Чего ты боишься? <span class="tiny">можно несколько</span></div>
+  <div class="options multi" data-q="fears">
+    <button class="opt check">личное пространство</button><button class="opt check">ссоры</button><button class="opt check">деньги</button><button class="opt check">быт убьёт романтику</button><button class="opt check">слишком быстро</button><button class="opt check">ответственность</button>
+  </div>
+</div>
+<div class="game">
+  <div class="game-title">А чего ждёшь больше всего?</div>
+  <div class="options multi" data-q="hopes">
+    <button class="opt check">просыпаться вместе</button><button class="opt check">возвращаться друг к другу</button><button class="opt check">больше секса 😌</button><button class="opt check">ужины</button><button class="opt check">коты рядом</button><button class="opt check">меньше логистики</button><button class="opt check">ощущение семьи ❤️</button>
+  </div>
+</div>
+<div class="game"><button class="primary" id="homeDraft">СОБРАТЬ OUR HOME DRAFT #1 🏠</button><div class="result" id="draftR"></div></div>
+</section>
+<section><div class="ey">15 • officially</div><h2>Оба красивые. Оба заняты.</h2>
 <div class="market"><div class="card dark"><span class="tiny">DANYA</span><h3>TAKEN ❤️</h3><p>девушки замечают ✓<br>флирт в ответ ✕<br>режим холостяка ✕</p></div><div class="card green"><span class="tiny">KSENIA</span><h3>TAKEN ❤️</h3><p>мужчины знакомятся ✓<br>флирт в ответ ✕<br>режим холостячки ✕</p></div></div>
 <div class="note"><b>Суть:</b> внимание других людей не отменяет отношения. Я тоже получаю его. Разница в том, что я делаю с этим вниманием.</div>
 <div class="game"><div class="game-title">С Ксюшей знакомится красивый мужчина. Что дальше?</div><div class="options" id="takenGame"><button class="opt" data-taken="ok">«спасибо» и живём дальше</button><button class="opt" data-taken="bad">ой, а я свободна?</button></div><div class="result" id="takenR"></div></div>
 <div class="game"><div class="game-title">MARKET STATUS</div><button class="primary" id="market">проверить свободные варианты</button><div class="result" id="marketR"></div></div></section>
 
-<section><div class="ey">08 • media boy settings</div><h2>Мой медийный мужчина.</h2>
+<section><div class="ey">16 • media boy settings</div><h2>Мой медийный мужчина.</h2>
 <div class="settings"><div class="set"><span>быть красивым</span><span class="on">ON</span></div><div class="set"><span>быть талантливым</span><span class="on">ON</span></div><div class="set"><span>мероприятия / работа</span><span class="on">ON</span></div><div class="set"><span>общаться с девушками по работе</span><span class="on">ON</span></div><div class="set"><span>флиртовать с девушками</span><button class="toggle badToggle">OFF</button></div><div class="set"><span>забывать, что твоя девушка тоже красивая</span><button class="toggle" id="forget">???</button></div></div><div class="result" id="mediaR"></div>
 <div class="copy" style="margin-top:22px"><p>Я не хочу контролировать каждый лайк. Мне важно самой чувствовать твоё внимание. Если что-то неоднозначное связано с работой, просто дай контекст, а не пустое место для моего сериала на 14 серий.</p></div></section>
 
-<section><div class="ey">09 • situations</div><h2>Normal / context / nope?</h2>
+<section><div class="ey">17 • situations</div><h2>Normal / context / nope?</h2>
 <div class="game" id="situ"><div class="scene"><div class="emoji" id="sitE">💬</div><div class="line" id="sitT">Коллега пишет по работе</div></div><div class="options"><button class="opt" data-s="NORMAL">NORMAL</button><button class="opt" data-s="CONTEXT">NEEDS CONTEXT</button><button class="opt" data-s="NOPE">NOPE</button></div><div class="result" id="sitR"></div></div></section>
 
-<section><div class="ey">10 • chemistry</div><h2>Секс начинается не в спальне.</h2><div class="game"><div class="game-title">Собери connection 🔥</div><div class="chips" id="sexChain"><button class="chip">внимание</button><button class="chip">флирт</button><button class="chip">взгляд</button><button class="chip">прикосновения</button><button class="chip">желанность</button></div><div class="result" id="sexR">0 / 5</div></div><div class="copy" style="margin-top:20px"><p>Мне важны страсть и химия, но одной химии недостаточно. Нужны ясность, стабильность, доверие и внимание друг к другу.</p></div></section>
+<section><div class="ey">18 • chemistry</div><h2>Секс начинается не в спальне.</h2><div class="game"><div class="game-title">Собери connection 🔥</div><div class="chips" id="sexChain"><button class="chip">внимание</button><button class="chip">флирт</button><button class="chip">взгляд</button><button class="chip">прикосновения</button><button class="chip">желанность</button></div><div class="result" id="sexR">0 / 5</div></div><div class="copy" style="margin-top:20px"><p>Мне важны страсть и химия, но одной химии недостаточно. Нужны ясность, стабильность, доверие и внимание друг к другу.</p></div></section>
 
-<section><div class="ey">11 • princess logistics</div><h2>Как меня радовать 🎀</h2>
+<section><div class="ey">19 • princess logistics</div><h2>Как меня радовать 🎀</h2>
 <div class="stickers"><span class="sticker">💐 цветы</span><span class="sticker">🍓 вкусное</span><span class="sticker">🎁 сюрпризы</span><span class="sticker">💌 «увидел и подумал о тебе»</span></div>
 <div class="game"><div class="game-title">Не знаешь, что подарить?</div><div class="options" id="wish"><button class="opt">паниковать</button><button class="opt">искать три часа</button><button class="opt" data-good="1">попросить мой виш-лист 💌</button></div><div class="result" id="wishR"></div></div>
 <div class="note"><b>У меня реально есть виш-лист.</b> Там буквально лежат готовые идеи. Технологии дошли до невероятного.</div>
 <div class="game"><div class="game-title">Что ценнее?</div><div class="options" id="wants"><button class="opt">что-то из wishlist</button><button class="opt">цветы без повода</button><button class="opt">мелочь, увидел → вспомнил обо мне</button></div><div class="result" id="wantsR"></div></div>
 <div class="miniq">Спойлер: дело не только в цене. Мне нравится сам момент «я увидел это и захотел тебя порадовать».</div></section>
 
-<section><div class="ey">12 • money</div><h2>Ужин. Принесли счёт.</h2>
+<section><div class="ey">20 • money</div><h2>Ужин. Принесли счёт.</h2>
 <div class="game"><div class="options" id="money"><button class="opt">Даня</button><button class="opt">Ксюша</button><button class="opt" data-calc="1">50/50 до копейки</button></div><div id="moneyR" class="result"></div></div>
 <div class="grid"><div class="card"><span class="tiny">ты позвал</span><h3>ты платишь 🤍</h3></div><div class="card"><span class="tiny">я придумала</span><h3>могу я</h3></div><div class="card full"><span class="tiny">общая жизнь</span><h3>обсуждаем, а не считаем картошку по чеку</h3></div></div></section>
 
-<section><div class="ey">13 • ksenia logic™</div><h2>Наука, которую не рецензировали.</h2>
+<section><div class="ey">21 • ksenia logic™</div><h2>Наука, которую не рецензировали.</h2>
 <div class="scene"><div class="line">ты сам захотел увидеться<br>↓<br>значит думал обо мне<br>↓<br>значит скучал<br>↓<br>значит любишь</div><div class="sub">Q.E.D.</div></div><div class="options" style="justify-content:center"><button class="opt" id="logical">логично</button><button class="opt" id="argue">оспорить</button></div></section>
 
-<section><div class="ey">14 • future.exe</div><h2>Тут ничего страшного.</h2><div class="game" style="text-align:center"><button class="primary" id="future" style="background:#111">НЕ НАЖИМАТЬ</button><div id="futureR"></div></div></section>
+<section><div class="ey">22 • future.exe</div><h2>Тут ничего страшного.</h2><div class="game" style="text-align:center"><button class="primary" id="future" style="background:#111">НЕ НАЖИМАТЬ</button><div id="futureR"></div></div></section>
 
-<section><div class="ey">15 • без шуток</div><h2>А если совсем без приколов.</h2><p class="quote">Мне нравится быть твоей женщиной.</p><div class="stickers"><span class="sticker">быть желанной ❤️</span><span class="sticker">быть замеченной</span><span class="sticker">забота</span><span class="sticker">инициатива</span><span class="sticker">верность</span><span class="sticker">интерес друг к другу</span></div><div class="note">Не слабой и не беспомощной. Просто <b>твоей женщиной</b>, рядом с которой ты тоже проявляешься сам.</div><div class="copy"><p>Я хочу давать тебе то же самое: поддержку, интерес, верность, желание, заботу и место в моей жизни.</p><p><b>Мои потребности не важнее твоих.</b> Поэтому в конце твоя очередь рассказать, как любить тебя.</p></div></section>
+<section><div class="ey">23 • без шуток</div><h2>А если совсем без приколов.</h2><p class="quote">Мне нравится быть твоей женщиной.</p><div class="stickers"><span class="sticker">быть желанной ❤️</span><span class="sticker">быть замеченной</span><span class="sticker">забота</span><span class="sticker">инициатива</span><span class="sticker">верность</span><span class="sticker">интерес друг к другу</span></div><div class="note">Не слабой и не беспомощной. Просто <b>твоей женщиной</b>, рядом с которой ты тоже проявляешься сам.</div><div class="copy"><p>Я хочу давать тебе то же самое: поддержку, интерес, верность, желание, заботу и место в моей жизни.</p><p><b>Мои потребности не важнее твоих.</b> Поэтому в конце твоя очередь рассказать, как любить тебя.</p></div></section>
 
-<section id="danya"><div class="ey">16 • final level</div><h2>DANYA OS.</h2><div class="copy"><p>Не копи на меня папку. Если что-то задевает, говори. Я могу поспорить и внутренне открыть Верховный суд, но я не могу исправить проблему, о существовании которой не знаю.</p></div>
+<section id="danya"><div class="ey">24 • final level</div><h2>DANYA OS.</h2><div class="copy"><p>Не копи на меня папку. Если что-то задевает, говори. Я могу поспорить и внутренне открыть Верховный суд, но я не могу исправить проблему, о существовании которой не знаю.</p></div>
 <div id="formSteps"></div><div class="stepcount" id="stepcount"></div></section>
 
 <div class="final"><div class="ey">connection established ●</div><h2>KSENIA<br>↕<br>DANYA <span class="heart">❤️</span></h2><p>Я не прошу читать мои мысли.<br><b>Я прошу слышать меня.</b></p>
@@ -126,6 +324,35 @@ $('#fan').onclick=()=>{if(!$('#three').value.trim()){$('#fanR').textContent='н�
 
 let place='',time='';$$('#places .opt').forEach(b=>b.onclick=()=>{place=b.textContent;$$('#places .opt').forEach(x=>x.style.background='');b.style.background='#eafff2';date()});$$('#times .opt').forEach(b=>b.onclick=()=>{time=b.textContent;$$('#times .opt').forEach(x=>x.style.background='');b.style.background='#eafff2';date()});function date(){if(place&&time){$('#dateR').innerHTML='<b>DANYA HAS A PLAN ❤️</b><br>'+place+' • '+time;award('Назвал план свидания','+100 к привлекательности')}}
 
+
+const homeAnswers={};
+function selectedText(q){return [...document.querySelectorAll(`[data-q="${q}"] .opt.selected`)].map(x=>x.textContent.trim())}
+$$('.qblock .choice').forEach(b=>b.onclick=()=>{let box=b.closest('.qblock');box.querySelectorAll('.choice').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');b.style.background='#eafff2';box.querySelectorAll('.choice').forEach(x=>{if(x!==b)x.style.background=''});homeAnswers[box.dataset.q]=b.textContent.trim()});
+$$('.check').forEach(b=>b.onclick=()=>{b.classList.toggle('selected');b.style.background=b.classList.contains('selected')?'#eafff2':''});
+
+$('#mergeBtn').onclick=async()=>{$('#mergeR').innerHTML='merging…';await sleep(500);$('#mergeR').innerHTML='<b>OUR LIFE ❤️</b><br>твои люди + мои люди • твои события + мои события • наши планы • наши воспоминания';award('Lives merged','не растворились друг в друге, просто появились «мы»')};
+$$('#plusOne .opt').forEach(b=>b.onclick=()=>{$('#plusR').innerHTML=b.dataset.plus==='ks'?'<span class="good">+1 GIRLFRIEND ADDED ❤️</span><br>вот буквально это. иногда я тоже хочу быть твоей +1.':'иногда одному нормально. но иногда хочется, чтобы ты вообще вспомнил: <b>«а Ксюшу можно взять?»</b>'});
+
+let sp=0;$$('#spaceNeed .check').forEach(b=>b.onclick=()=>{setTimeout(()=>{sp=$$('#spaceNeed .check.selected').length;$('#spaceR').innerHTML=sp<3?'пока помещаемся 😌':sp<6?'<b>евродвушка начинает выглядеть разумно</b>':'<b>двушка смотрит на нас всё убедительнее ❤️</b><br>две работы + музыка + два кота всё-таки требуют пространства.'},0)});
+
+$$('#lucifer .opt').forEach(b=>b.onclick=()=>{$('#luciferR').innerHTML='<span class="good">ЛЮЦИФЕР ADDED 🐈‍⬛ ✓</span><br>других вариантов тут и правда не было'});
+$$('#boss .opt').forEach(b=>b.onclick=()=>{$('#bossR').innerHTML=b.dataset.human?'<b>неверно.</b><br>слишком оптимистично для квартиры с двумя котами.':'<span class="good">вероятнее всего ✓</span>'});
+
+$$('#schedule .opt').forEach(b=>b.onclick=async()=>{if(b.dataset.sch==='panic'){$('#scheduleR').innerHTML='calculating human life…';await sleep(550);$('#scheduleR').innerHTML='<b>Вы всё равно возвращаетесь в один дом.</b><br>Не обязаны быть рядом 24/7, чтобы жить вместе.'}else{$('#scheduleR').innerHTML='<span class="good">именно ❤️</span><br>У каждого свой день. В конце дня у нас всё равно есть «домой».';award('Schedule compatible','отношения не требуют общего табеля')}});
+$$('#sock .opt').forEach(b=>b.onclick=()=>{let v=b.dataset.sock;$('#sockR').innerHTML=v==='him'?'<span class="good">невероятно. корзина была найдена ✓</span>':v==='me'?'<b>не злоупотребляй добротой системы 😭</b><br>Я сказала «постираю», а не «проведу поисково-спасательную операцию».':'<b>PROPERTY REGISTERED 🧦</b><br>носок официально проживает здесь'});
+$$('#dinner .opt').forEach(b=>b.onclick=()=>{$('#dinnerR').innerHTML=b.dataset.real?'<b>реалистичный сценарий обнаружен ✓</b>':'принято. главное, чтобы через час мы всё-таки ели 😭'});
+
+const day=[
+ ['☀️','08:14','проснулись рядом • коты уже требуют невозможного'],
+ ['🏢','09:10','я уехала в офис • ты поехал на учёбу / по своим делам'],
+ ['💬','14:07','«как ты?» • у каждого идёт свой день'],
+ ['🏠','20:46','кто-то возвращается раньше • кто-то позже • но оба домой'],
+ ['🍝','21:30','поели • рассказали, что произошло • каждый немного выдохнул'],
+ ['💋','23:58','не нужно договариваться о следующей встрече • я просто рядом ❤️']
+];let di=0;
+$('#dayNext').onclick=()=>{di=(di+1)%day.length;$('#dayE').textContent=day[di][0];$('#dayT').textContent=day[di][1];$('#dayS').textContent=day[di][2];if(di===day.length-1)award('Обычный вторник прожит','и он оказался довольно классным')};
+
+$('#homeDraft').onclick=()=>{let get=q=>homeAnswers[q]||selectedText(q).join(', ')||'обсудим';let fears=selectedText('fears').join(', ')||'не выбрано';let hopes=selectedText('hopes').join(', ')||'не выбрано';$('#draftR').innerHTML=`<div class="card dark" style="margin-top:14px;text-align:left"><span class="tiny">OUR HOME DRAFT #1</span><h3>🏠 Ксюша + Даня + Грейс + Люцифер</h3><p><b>Когда:</b> ${get('when')}<br><b>Квартира:</b> ${get('flat')}<br><b>Тест-драйв:</b> ${get('testdrive')}<br><b>Страшно:</b> ${fears}<br><b>Ждём:</b> ${hopes}</p></div>`;award('Our Home Draft #1','это план разговора, а не договор ипотеки')};
 $$('#takenGame .opt').forEach(b=>b.onclick=()=>{if(b.dataset.taken==='ok'){$('#takenR').innerHTML='<span class="good">именно ❤️</span><br>Мне приятно внимание. Но мужчина у меня уже есть.';award('TAKEN','взаимность обнаружена')}else{$('#takenR').innerHTML='<b>секундочку…</b><br>checking relationship status…<br><span class="good">BOYFRIEND DETECTED: DANYA ❤️</span>'}});
 $('#market').onclick=async()=>{$('#marketR').textContent='searching...';await sleep(650);$('#marketR').innerHTML='<b>0 results found.</b><br>Попробуйте никогда 😌'};
 $$('.badToggle').forEach(b=>b.onclick=()=>{b.textContent='OFF';award('ДАНЯ, НЕ ПОЗОРЬСЯ 💀','эта функция несовместима с OFFICIALLY')});
