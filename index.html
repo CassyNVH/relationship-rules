@@ -4,182 +4,209 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#ffffff">
-<title>Ксюша ❤️ Даня</title>
+<title>Ксюша × Даня — OFFICIALLY</title>
 <style>
-:root{--bg:#fff;--ink:#090909;--muted:#8e8e93;--line:#e6e6e8;--in:#f0f0f2;--green:#22c55e;--gd:#159447;--red:#ff3b30}
-*{box-sizing:border-box}html{background:#ededed}body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;min-height:100dvh}
-button,textarea{font:inherit}button{-webkit-tap-highlight-color:transparent}
-#app{max-width:620px;min-height:100dvh;margin:auto;background:#fff}
+:root{--ink:#0a0a0a;--paper:#fff;--soft:#f4f4f4;--line:#e7e7e7;--muted:#858585;--green:#20c563;--red:#ff3b30}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:#eee}body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif}
+button,textarea{font:inherit}button{-webkit-tap-highlight-color:transparent;cursor:pointer}
+.site{max-width:720px;margin:auto;background:#fff;min-height:100dvh;overflow:hidden}
 .splash{position:fixed;inset:0;z-index:100;background:#080808;color:#fff;display:grid;place-items:center;padding:24px;transition:.35s}
-.notice{width:min(430px,100%);padding:14px 16px;border:1px solid #3b3b3e;border-radius:22px;background:#242426;box-shadow:0 22px 70px #0008;cursor:pointer}
-.nt{display:flex;justify-content:space-between;color:#aaa;font-size:11px;margin-bottom:7px}.notice b{display:block;margin-bottom:4px}.notice p{margin:0}
-header{height:78px;padding:calc(9px + env(safe-area-inset-top)) 14px 8px;position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);background:#fffffff2;backdrop-filter:blur(16px)}
-.avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#111;color:#fff;font-weight:800}.name{line-height:1.15}.name b{font-size:16px}.online{font-size:12px;color:var(--green);margin-top:4px}.days{margin-left:auto;text-align:right;color:var(--muted);font-size:10px;line-height:1.35}
-#chat{padding:16px 12px 150px;min-height:calc(100dvh - 78px)}
-.row{display:flex;margin:7px 0;animation:up .22s ease-out}.row.me{justify-content:flex-end}.bubble{max-width:84%;padding:10px 13px;border-radius:19px;background:var(--in);font-size:16px;line-height:1.34;white-space:pre-wrap;overflow-wrap:anywhere}.them .bubble{border-bottom-left-radius:6px}.me .bubble{background:var(--green);color:#fff;border-bottom-right-radius:6px}
-.system{max-width:88%;margin:17px auto;text-align:center;color:var(--muted);font-size:12px;animation:up .22s}.system strong{color:var(--ink)}
-.typing{width:58px;height:36px;margin:7px 0;padding:0 13px;display:flex;align-items:center;gap:4px;background:var(--in);border-radius:18px}.dot{width:6px;height:6px;border-radius:50%;background:#8e8e93;animation:b 1s infinite}.dot:nth-child(2){animation-delay:.14s}.dot:nth-child(3){animation-delay:.28s}
-.choices{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px;animation:up .22s}.choice{padding:10px 14px;border:1px solid var(--green);border-radius:999px;background:#fff;color:var(--gd);font-weight:650;cursor:pointer}.choice.bad{border-color:#ddd;color:#555}.choice:active{transform:scale(.97)}
-.card{margin:12px 0;padding:15px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 10px 35px #00000010;animation:up .22s}.card h3{margin:0 0 10px;font-size:14px}.small{font-size:12px;color:var(--muted)}
-.progress{height:8px;margin:10px 0;background:#eee;border-radius:10px;overflow:hidden}.bar{height:100%;width:34%;background:var(--green);transition:.4s}
-.pills{display:flex;gap:7px;flex-wrap:wrap}.pill{padding:8px 10px;border:1px solid #ddd;border-radius:999px;background:#fff}.pill:disabled{opacity:.7}
-.voice{display:flex;align-items:center;gap:10px}.play{width:34px;height:34px;border:0;border-radius:50%;background:#111;color:#fff}.wave{flex:1;color:#777;letter-spacing:-2px;overflow:hidden}.split{display:flex;justify-content:space-between;align-items:center}.blackbtn{padding:8px 11px;border:0;border-radius:12px;background:#111;color:#fff}
-textarea{width:100%;min-height:80px;margin-top:8px;padding:11px;border:1px solid #ddd;border-radius:14px;outline:0;resize:vertical}textarea:focus{border-color:var(--green)}.send{width:100%;margin-top:9px;padding:12px;border:0;border-radius:14px;background:var(--green);color:#fff;font-weight:750}.heart{color:var(--red)}
-@keyframes b{0%,60%,100%{transform:none}30%{transform:translateY(-4px)}}@keyframes up{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
-@media(min-width:621px){#app{box-shadow:0 0 60px #0002}}
+.notification{width:min(430px,100%);background:#242426;border:1px solid #3d3d40;border-radius:23px;padding:14px 16px;box-shadow:0 24px 70px #0009}
+.notification .top{display:flex;justify-content:space-between;font-size:11px;color:#aaa;margin-bottom:7px}.notification b{display:block;margin-bottom:4px}.notification p{margin:0}
+.hero{min-height:88dvh;padding:34px 22px 46px;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+h1{font-size:clamp(48px,14vw,92px);line-height:.9;letter-spacing:-.07em;margin:0 0 22px;max-width:680px}h2{font-size:clamp(34px,9vw,58px);line-height:.96;letter-spacing:-.055em;margin:0 0 18px}h3{margin:0 0 8px}
+.lead{font-size:20px;line-height:1.35;max-width:570px;margin:0;color:#303030}.heart{color:var(--red)}
+.cta{align-self:flex-start;border:0;border-radius:999px;background:var(--green);color:#fff;font-weight:800;padding:14px 20px;margin-top:28px}
+section{padding:72px 22px;border-bottom:1px solid var(--line)}.copy{font-size:18px;line-height:1.45;max-width:610px}.copy p{margin:0 0 15px}.bigquote{font-size:clamp(31px,8vw,52px);line-height:1.03;letter-spacing:-.045em;font-weight:850;margin:26px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}.card{border:1px solid var(--line);border-radius:22px;padding:17px;background:#fff}.card.dark{background:#0a0a0a;color:#fff;border-color:#0a0a0a}.card.green{background:var(--green);color:#fff;border-color:var(--green)}.card .tiny{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.dark .tiny,.green .tiny{color:#ffffffaa}.card p{margin:8px 0 0;line-height:1.35}
+.full{grid-column:1/-1}.pillbox{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.pill{border:1px solid #ddd;background:#fff;border-radius:999px;padding:9px 11px}
+.chatbox{margin:22px 0;border:1px solid var(--line);border-radius:27px;overflow:hidden;background:#fff;box-shadow:0 14px 45px #0000000c}
+.chathead{height:62px;display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--line);background:#fff}.avatar{width:38px;height:38px;border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;font-weight:800}.online{font-size:11px;color:var(--green)}
+.chatbody{padding:16px 12px;background:#fafafa}.row{display:flex;margin:7px 0;animation:up .25s}.row.me{justify-content:flex-end}.bubble{max-width:82%;background:#ededf0;border-radius:18px;border-bottom-left-radius:5px;padding:9px 12px;line-height:1.32}.me .bubble{background:var(--green);color:#fff;border-bottom-left-radius:18px;border-bottom-right-radius:5px}
+.typing{width:55px;height:34px;display:flex;align-items:center;gap:4px;padding:0 12px;background:#ededf0;border-radius:17px}.dot{width:6px;height:6px;border-radius:50%;background:#888;animation:b 1s infinite}.dot:nth-child(2){animation-delay:.15s}.dot:nth-child(3){animation-delay:.3s}
+.chat-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.reply{border:1px solid var(--green);color:#168f48;background:#fff;border-radius:999px;padding:9px 12px;font-weight:700}
+.metric{margin-top:22px}.metric-top{display:flex;justify-content:space-between;font-weight:800}.track{height:10px;border-radius:20px;background:#eee;margin:10px 0;overflow:hidden}.bar{height:100%;width:34%;background:var(--green);transition:.4s}
+.actions{display:flex;gap:7px;flex-wrap:wrap}.action{border:1px solid #ddd;border-radius:999px;padding:9px 11px;background:#fff}.action:disabled{opacity:.55}
+.switchrow{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-top:1px solid var(--line)}.switch{border:0;border-radius:999px;background:#111;color:#fff;padding:8px 11px;font-weight:800}
+.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-top:15px}.day{aspect-ratio:1;display:grid;place-items:center;border:1px solid #e8e8e8;border-radius:10px;font-size:12px}.date{background:var(--green);color:#fff;border-color:var(--green);font-weight:800}
+.achievement{display:flex;gap:9px;align-items:center;padding:11px 0;border-bottom:1px solid #eee}.achievement:last-child{border:0}
+.future{font-size:36px;letter-spacing:.08em;line-height:1.8;text-align:center;margin:15px 0}
+.formcard{margin-top:14px;border:1px solid var(--line);border-radius:20px;padding:15px}.formcard label{font-weight:750;display:block;line-height:1.25}.formcard textarea{width:100%;min-height:78px;border:1px solid #ddd;border-radius:14px;margin-top:10px;padding:11px;outline:0;resize:vertical}.formcard textarea:focus{border-color:var(--green)}
+.save{width:100%;border:0;border-radius:15px;background:var(--green);color:#fff;padding:13px;font-weight:850;margin-top:14px}.saved{text-align:center;color:var(--green);font-weight:800;margin-top:12px}
+.footer{padding:70px 22px 100px;text-align:center}.footer h2{font-size:48px}.terms{font-size:11px;color:var(--muted);margin-top:30px}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,120px);z-index:50;background:#111;color:#fff;border-radius:999px;padding:11px 16px;font-size:13px;transition:.3s;white-space:nowrap}.toast.show{transform:translate(-50%,0)}
+@keyframes b{0%,60%,100%{transform:none}30%{transform:translateY(-4px)}}@keyframes up{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.full{grid-column:auto}section{padding:60px 18px}.hero{padding-left:18px;padding-right:18px}}
 </style>
 </head>
 <body>
-<div class="splash" id="splash"><div class="notice" id="open">
-<div class="nt"><span>СООБЩЕНИЯ</span><span>сейчас</span></div><b>Ксюша ❤️</b><p>короче я тут сделала одну хуйню</p>
-</div></div>
-<div id="app">
-<header><div class="avatar">К</div><div class="name"><b>Ксюша ❤️</b><div class="online">online • officially yours</div></div><div class="days" id="days">OFFICIALLY<br>26.07.2026</div></header>
-<main id="chat"></main>
+<div class="splash" id="splash"><button class="notification" id="open" type="button" style="text-align:left;color:#fff">
+<div class="top"><span>СООБЩЕНИЯ</span><span>сейчас</span></div><b>Ксюша ❤️</b><p>короче я тут сделала одну хуйню</p></button></div>
+
+<div class="site">
+<header class="hero" id="top">
+<div class="eyebrow">Ksenia × Danya • officially</div>
+<h1>ПРАВИЛА<br>ОТНОШЕНИЙ<br>СО МНОЙ<span class="heart">.</span></h1>
+<p class="lead">Не техническое задание на должность моего парня. Скорее инструкция к человеку, которого ты зачем-то сам забрал в жизнь.</p>
+<button class="cta" onclick="document.querySelector('#why').scrollIntoView()">открыть инструкцию ❤️</button>
+</header>
+
+<section id="why">
+<div class="eyebrow">00 • сначала важное</div><h2>Зачем я вообще сделала этот сайт?</h2>
+<div class="copy"><p>Я проходила психотерапию, и она очень помогла мне разобраться в себе. Понять, что для меня любовь, безопасность, близость и где проходят мои реальные границы.</p>
+<p>Я тоже ошибалась в отношениях. Иногда реагировала неправильно. Иногда терпела то, что мне не подходило. Иногда сама делала вещи, которые сейчас сделала бы иначе.</p>
+<p><b>Поэтому это не инструкция «как не разозлить Ксюшу».</b> Это скорее карта моего мозга. Чтобы тебе не приходилось угадывать, почему для меня что-то важно.</p></div>
+<div class="grid">
+<div class="card dark"><span class="tiny">KSENIA OS</span><h3>Саморефлексия</h3><p>● online</p></div>
+<div class="card"><span class="tiny">past mistakes</span><h3>Признаны</h3><p>✓ acknowledged</p></div>
+<div class="card"><span class="tiny">anxiety</span><h3>Иногда чудит</h3><p>△ без разрешения</p></div>
+<div class="card green"><span class="tiny">love for Danya</span><h3>Активна</h3><p>● annoyingly active</p></div>
 </div>
+
+<div class="chatbox" id="origin"><div class="chathead"><div class="avatar">К</div><div><b>Ксюша ❤️</b><div class="online">online</div></div></div><div class="chatbody" id="originBody">
+<div class="row"><div class="bubble">ну и вообще</div></div>
+<div class="row"><div class="bubble">ты сам меня забрал</div></div>
+<div class="row me"><div class="bubble">куда?</div></div>
+<div class="row"><div class="bubble">в жизнь</div></div>
+<div class="row me"><div class="bubble">реально?</div></div>
+<div class="row"><div class="bubble">реально. officially.</div></div>
+</div></div>
+<p class="bigquote">Если мы official, то мы действительно official.</p>
+<div class="copy"><p>Не 24/7 вместе. Не контроль. Не растворение друг в друге. Просто я хочу существовать не в отдельной вкладке твоей жизни, а в самой жизни.</p></div>
+</section>
+
+<section>
+<div class="eyebrow">01 • priority</div><h2>Я хочу чувствовать любовь, а не угадывать её.</h2>
+<div class="copy"><p>Мне не нужно быть единственным человеком в твоей жизни. Мне нужно понимать своё место в ней.</p><p>Приоритет для меня не значит «брось работу, учёбу и стань моим домашним животным». Это значит самому находить место для нас, а не вспоминать об отношениях только в случайно свободном окне.</p></div>
+<div class="metric"><div class="metric-top"><span>LOVE CONNECTION</span><span id="loveN">34%</span></div><div class="track"><div class="bar" id="loveBar"></div></div>
+<div class="actions" id="loveActions"><button class="action" data-n="18">обнять</button><button class="action" data-n="20">спросить как я</button><button class="action" data-n="14">сказать тёплое</button><button class="action" data-n="28">предложить встречу</button></div></div>
+<p class="bigquote">Любовь не копится на балансе.</p>
+<div class="copy"><p>Вчерашнее «я тебя люблю» не становится неправдой сегодня. Но оно не заменяет сегодняшнюю близость. Мне нужны маленькие регулярные сигналы связи: слова, внимание, прикосновения, интерес, время и инициатива.</p><p>Не ежедневное доказательство любви в суде. Просто контакт. <span class="heart">❤️</span></p></div>
+</section>
+
+<section>
+<div class="eyebrow">02 • communication</div><h2>Пауза можно. Неизвестность нет.</h2>
+<div class="grid"><div class="card"><span class="tiny">если занят</span><h3>Нормально</h3><p>«Я сейчас занят. Прочитал тебя. Вернусь к разговору позже».</p></div><div class="card dark"><span class="tiny">если исчез</span><h3>Не нормально</h3><p>boyfriend.exe временно недоступен 💀</p></div></div>
+<div class="copy" style="margin-top:22px"><p>Мне не нужен мгновенный ответ 24/7. Но я не хочу оставаться одна с переживанием, пока сложный разговор просто висит в воздухе.</p></div>
+<div class="chatbox"><div class="chathead"><div class="avatar">К</div><div><b>Ксюша ❤️</b><div class="online">печатает...</div></div></div><div class="chatbody">
+<div class="row"><div class="bubble">🎙️ Голосовое сообщение 0:04</div></div>
+<div class="chat-actions"><button class="reply" id="voice">▶ прослушать</button></div><div id="voiceResult"></div>
+</div></div>
+</section>
+
+<section>
+<div class="eyebrow">03 • mutual interest</div><h2>Мы не артист и фанатка.</h2>
+<p class="bigquote">Мы должны быть фанатами друг друга.</p>
+<div class="copy"><p>Мне интересно, чем ты живёшь: проекты, музыка, мысли, что тебя радует и что беспокоит. И мне нужен такой же живой интерес ко мне.</p><p>Спрашивай про мой день, что я пишу, о чём думаю, что меня волнует. Не допрос. Просто любопытство к человеку, которого любишь.</p></div>
+<div class="grid"><div class="card green"><span class="tiny">membership</span><h3>Ксюша → Danya Fan Club</h3><p>ACTIVE ✓</p></div><div class="card dark"><span class="tiny">membership</span><h3>Даня → Ksenia Fan Club</h3><p>ACTIVE ✓</p></div></div>
+</section>
+
+<section>
+<div class="eyebrow">04 • initiative</div><h2>Я не хочу быть менеджером собственных отношений.</h2>
+<div class="copy"><p>Не хочу всегда быть человеком, который спрашивает «увидимся?», «когда?», «куда пойдём?» и потом организует всё сам.</p></div>
+<div class="grid"><div class="card"><span class="tiny">не только дома</span><h3>Нам нужны воспоминания</h3><p>Ресторан, прогулка, кино, концерт, мероприятие, ночной город, поездка, какая-нибудь спонтанная хрень.</p></div><div class="card dark"><span class="tiny">initiative</span><h3>Теперь твоя очередь.</h3><p>Сам придумал. Сам предложил. Сам назначил конкретный день. Сексуально.</p></div></div>
+<div class="calendar"><span class="day">1</span><span class="day">2</span><span class="day">3</span><span class="day">4</span><span class="day">5</span><span class="day">6</span><span class="day">7</span><span class="day">8</span><span class="day">9</span><span class="day">10</span><span class="day">11</span><span class="day">12</span><span class="day date">DATE ❤️</span><span class="day">14</span></div>
+</section>
+
+<section>
+<div class="eyebrow">05 • public & private</div><h2>Media Boy Mode.</h2>
+<div class="copy"><p>Я понимаю, что ты медийный человек. Работа, аудитория, знакомства и девушки вокруг не исчезнут.</p><p>Я не хочу контролировать каждый лайк. Но мне неприятно видеть твоё публичное внимание к другим и при этом самой чувствовать себя незаметной.</p><p>Если что-то выглядит неоднозначно и связано с работой, дай контекст. Не оставляй пустоту, которую мой мозг радостно заполнит сериалом на 14 серий.</p></div>
+<div class="card" style="margin-top:24px"><div class="switchrow" style="border:0"><b>Медийность</b><b style="color:var(--green)">ON</b></div><div class="switchrow"><b>Вести себя как холостой</b><button class="switch" id="single">OFF</button></div><div id="singleMsg" class="small"></div></div>
+<p class="bigquote">Officially means officially.</p>
+<div class="copy"><p>Друзья, работа, обычное общение и профессиональные контакты нормальны. Флирт, романтические подкаты, сексуальный контекст и образ свободного ловеласа уже нет.</p><p>И всё это работает в обе стороны. Какая неожиданная концепция взаимности.</p></div>
+</section>
+
+<section>
+<div class="eyebrow">06 • boundaries</div><h2>Границы без тюрьмы строгого режима.</h2>
+<div class="grid"><div class="card"><span class="tiny">green zone</span><h3>Нормально</h3><p>Друзья, общие компании, работа, обычное человеческое общение.</p></div><div class="card dark"><span class="tiny">red zone</span><h3>Не подходит</h3><p>Флирт, поцелуи, секс, романтические свидания, интимная эмоциональная близость вместо отношений со мной.</p></div><div class="card full"><span class="tiny">exes</span><h3>ARCHIVE ≠ NEW SEASON</h3><p>Прошлое может существовать. Новую эмоциональную вселенную с прошлым строить не надо.</p></div></div>
+</section>
+
+<section>
+<div class="eyebrow">07 • chemistry</div><h2>Химии недостаточно.</h2>
+<div class="pillbox"><span class="pill">🔥 химия</span><span class="pill">ясность</span><span class="pill">стабильность</span><span class="pill">действия</span><span class="pill">выбор друг друга</span><span class="pill">близость</span></div>
+<p class="bigquote">Секс начинается не в спальне.</p>
+<div class="copy"><p>Он начинается с того, как ты смотришь на меня, говоришь со мной, прикасаешься, проявляешь желание. Мне важно чувствовать, что ты хочешь именно меня.</p><p>А хороший секс для меня это страсть + безопасность + желание + внимание к реакциям друг друга.</p></div>
+</section>
+
+<section>
+<div class="eyebrow">08 • support</div><h2>Когда мне плохо, будь рядом со мной.</h2>
+<div class="grid"><div class="card green"><span class="tiny">вариант 1</span><h3>Помочь решить</h3><p>Если проблему можно решить, помоги мне не оставаться с ней одной.</p></div><div class="card"><span class="tiny">вариант 2</span><h3>Просто быть рядом</h3><p>Иногда мне нужен не план спасения мира, а человек рядом.</p></div></div>
+<div class="copy" style="margin-top:22px"><p>Если я тревожусь, не нужно соглашаться со всеми моими страхами. Но «ты опять придумала хуйню» тоже не работает.</p><p><b>Лучше:</b> «Я понимаю, почему тебя это задело. Вот что происходит на самом деле. Я рядом».</p></div>
+</section>
+
+<section>
+<div class="eyebrow">09 • tiny things</div><h2>Мелочи для меня не мелочи.</h2>
+<div class="grid"><div class="card">«доехала?»</div><div class="card">«ты устала?»</div><div class="card">«я возьму»</div><div class="card">цветы без повода 💐</div><div class="card">вкусняшка</div><div class="card">«увидел и вспомнил о тебе»</div></div>
+<p class="bigquote">Мне не обязательно нужен дорогой жест. Мне важно «я подумал о тебе».</p>
+<div class="copy"><p>И да, подарки, цветы и маленькие сюрпризы я люблю. Меня можно подкупить. Просто не только ими. 😌</p></div>
+</section>
+
+<section>
+<div class="eyebrow">10 • money</div><h2>Это отношения, а не бухгалтерия.</h2>
+<div class="copy"><p>Моя комфортная модель не про математическое 50/50 каждого чека. Когда мужчина зовёт и организует совместный выход, мне нравится, когда он берёт оплату на себя.</p><p>Если что-то организовала я, я могу заплатить сама. В общей жизни большие расходы обсуждаются. Я тоже вкладываюсь в отношения, просто не хочу превращать близость в Excel.</p></div>
+</section>
+
+<section>
+<div class="eyebrow">11 • future.exe</div><h2>Только не пугайся.</h2>
+<div class="chatbox"><div class="chathead"><div class="avatar">К</div><div><b>Ксюша ❤️</b><div class="online">печатает...</div></div></div><div class="chatbody">
+<div class="row"><div class="bubble">когда я люблю человека</div></div><div class="row"><div class="bubble">мой мозг иногда случайно планирует следующие 60 лет 😭</div></div><div class="row me"><div class="bubble">...</div></div>
+</div></div>
+<div class="future">🏠 💍 👶 ✈️<br>👗 🤵 🐈 👵🏻👴🏻</div>
+<div class="copy"><p>Даня, спокойно. Дом завтра покупать не надо.</p><p>Это не дедлайн и не требование кольца. Когда я люблю, мне естественно представлять будущее. Для меня серьёзные отношения потенциально ведут к семье.</p></div>
+</section>
+
+<section>
+<div class="eyebrow">12 • what Danya gets</div><h2>Я прошу много не потому, что собираюсь давать мало.</h2>
+<div class="grid"><div class="card dark"><h3>Любовь</h3><p>Не декоративную. Настоящую и включённую.</p></div><div class="card"><h3>Верность</h3><p>Те же правила действуют на меня.</p></div><div class="card"><h3>Интерес</h3><p>К твоей жизни, музыке, идеям и тому, что с тобой происходит.</p></div><div class="card green"><h3>Поддержку</h3><p>Я хочу быть твоим человеком, а не ещё одной задачей.</p></div><div class="card"><h3>Заботу</h3><p>Я тоже замечаю, спрашиваю, помогаю и стараюсь.</p></div><div class="card dark"><h3>Приключения</h3><p>И немного контролируемого хаоса. Ну куда без него.</p></div></div>
+</section>
+
+<section>
+<div class="eyebrow">13 • achievements</div><h2>Boyfriend level up.</h2>
+<div class="card">
+<div class="achievement"><span>🎧</span><div><b>Прослушал голосовое</b><div class="small">редкое древнее искусство</div></div></div>
+<div class="achievement"><span>📅</span><div><b>Назвал конкретную дату встречи</b><div class="small">+100 к привлекательности</div></div></div>
+<div class="achievement"><span>🧠</span><div><b>Не заставил Ксюшу читать мысли</b><div class="small">легендарное достижение</div></div></div>
+<div class="achievement"><span>💐</span><div><b>Сам придумал, как порадовать</b></div></div>
+<div class="achievement"><span>🫂</span><div><b>Не исчез во время сложного разговора</b></div></div>
+<div class="achievement"><span>👥</span><div><b>Впустил девушку в реальную жизнь</b></div></div>
+</div>
+</section>
+
+<section id="danya">
+<div class="eyebrow">14 • plot twist</div><h2>Теперь твоя очередь.</h2>
+<div class="copy"><p>Я могу очень подробно объяснить, как работает мой мозг. Но я не хочу, чтобы отношения строились только вокруг понимания меня.</p><p><b>Мне нужно научиться любить тебя так, как нужно тебе.</b></p><p>Не копи на меня папку. Я не хочу однажды услышать: «вообще-то меня всё это время бесило вот это, это и это, просто я тебе не говорил».</p></div>
+<div id="forms"></div>
+<button class="save" id="save">СОХРАНИТЬ DANYA OS</button><div class="saved" id="saved"></div>
+</section>
+
+<div class="footer">
+<div class="eyebrow">connection established ●</div><h2>KSENIA<br>↕<br>DANYA <span class="heart">❤️</span></h2>
+<p>Я не хочу идеальных отношений.<br>Я хочу тёплые, взаимные и красивые.</p>
+<p><b>Я не прошу читать мои мысли. Я прошу слышать меня.</b></p>
+<div class="chatbox" style="text-align:left"><div class="chathead"><div class="avatar">К</div><div><b>Ксюша ❤️</b><div class="online">online</div></div></div><div class="chatbody" id="finalChat">
+<div class="row"><div class="bubble">ну вот</div></div><div class="row"><div class="bubble">теперь ты немного лучше знаешь, кого именно забрал</div></div>
+<div class="chat-actions"><button class="reply" id="food">а кушать будем? 😭</button><button class="reply" id="sex">а секс у нас будет? 🤨</button></div>
+</div></div>
+<div class="terms">Terms & Conditions применяются к обеим сторонам.<br>Люди, к сожалению, обновляются. Поэтому разговариваем.<br><br>OFFICIALLY ❤️</div>
+</div>
+</div>
+<div class="toast" id="toast"></div>
+
 <script>
-const chat=document.querySelector('#chat'),sleep=m=>new Promise(r=>setTimeout(r,m));let love=34;
-function bottom(){requestAnimationFrame(()=>window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'}))}
-function msg(t,me=false){let r=document.createElement('div');r.className='row '+(me?'me':'them');let b=document.createElement('div');b.className='bubble';b.textContent=t;r.append(b);chat.append(r);bottom();return r}
-function sys(t){let d=document.createElement('div');d.className='system';d.innerHTML=t;chat.append(d);bottom();return d}
-async function typing(ms=520){let t=document.createElement('div');t.className='typing';t.innerHTML='<i class="dot"></i><i class="dot"></i><i class="dot"></i>';chat.append(t);bottom();await sleep(ms);t.remove()}
-async function say(t,ms=520){await typing(ms);return msg(t)}
-function choose(arr){return new Promise(res=>{let c=document.createElement('div');c.className='choices';arr.forEach(x=>{let b=document.createElement('button');b.type='button';b.className='choice'+(x.bad?' bad':'');b.textContent=x.t;b.onclick=()=>{msg(x.t,true);c.remove();res(x.v||x.t)};c.append(b)});chat.append(c);bottom()})}
-function card(h){let d=document.createElement('div');d.className='card';d.innerHTML=h;chat.append(d);bottom();return d}
-function counter(){let s=new Date(2026,6,26),n=new Date(),d=Math.max(0,Math.floor((n-s)/86400000));document.querySelector('#days').innerHTML='OFFICIALLY<br>'+d+' дней ❤️'}counter();
-
-async function run(){
- await say('привет',380);await say('короче',380);await say('я тут сделала одну хуйню',550);await say('только не пугайся 😭',500);
- await choose([{t:'что ты сделала'}]);await say('сайт');await say('про отношения со мной');await say('💀',350);
- await say('прежде чем ты решишь, что я окончательно ебанулась, у меня есть объяснение');
- sys('<strong>ЗАЧЕМ ВООБЩЕ ЭТОТ САЙТ?</strong>');
- await say('Я проходила психотерапию. Она очень помогла мне разобраться в себе: в страхах, ошибках, границах и в том, какие отношения я хочу строить.');
- await say('Я тоже ошибалась. Иногда реагировала неправильно, иногда терпела то, что мне не подходило, иногда сама делала вещи, которые сейчас сделала бы иначе.');
- await say('Поэтому это не инструкция «как не разозлить Ксюшу» 😭');
- await say('Это карта моего мозга. Чтобы тебе не приходилось угадывать, почему для меня что-то важно.');
- card('<h3>KSENIA OS</h3><div>Саморефлексия <b style="float:right">● online</b></div><div>Ошибки <b style="float:right">✓ acknowledged</b></div><div>Границы <b style="float:right">✓ updated</b></div><div>Тревожность <b style="float:right">△ иногда чудит</b></div><div>Любовь к Дане <b class="heart" style="float:right">● annoyingly active</b></div>');
- await choose([{t:'ладно, показывай ❤️'}]);
-
- sys('26 июля 2026');
- await say('Забираю тебя');await choose([{t:'Куда? В жизнь?'}]);await say('В жизнь');await choose([{t:'Реально?'},{t:'Без шуток?'}]);await say('Без шуток');await say('Реально');await say('Не вру');
- await choose([{t:'А официально?'}]);await say('Officially.');sys('❤️ Вы теперь официально в отношениях');
- await say('ну вот. я запомнила.');
- await say('Если ты забрал меня в жизнь, я не хочу существовать где-то в отдельной вкладке этой жизни.');
- await say('Не 24/7 вместе. Не контроль. Просто если мы official, то мы действительно official.');
-
- sys('<strong>PRIORITY</strong>');
- await say('Мне не нужно быть единственным человеком в твоей жизни. Но мне нужно понимать своё место в ней и чувствовать, что я важна.');
- let x=await choose([{t:'понял ❤️'},{t:'то есть бросить всё?',bad:true}]);if(x.includes('бросить'))await say('нет 😭 не надо становиться моим домашним животным');
- await say('Приоритет = не строить жизнь так, будто отношения существуют только в случайно свободном окне.');
-
- sys('<strong>ЛЮБОВЬ НЕ КОПИТСЯ НА БАЛАНСЕ</strong>');
- let c=card('<h3>LOVE CONNECTION <span id="ln">34%</span></h3><div class="progress"><div class="bar" id="lb"></div></div><div class="small">маленькие регулярные сигналы связи</div><div class="pills" id="lp" style="margin-top:12px"></div>');
- [['обнять',18],['спросить как я',22],['сказать тёплое',12],['предложить встречу',28]].forEach(a=>{let b=document.createElement('button');b.className='pill';b.textContent=a[0];b.onclick=()=>{b.disabled=true;b.textContent='✓ '+a[0];love=Math.min(100,love+a[1]);c.querySelector('#ln').textContent=love+'%';c.querySelector('#lb').style.width=love+'%'};c.querySelector('#lp').append(b)});
- await say('Мне недостаточно однажды узнать, что меня любят, и потом хранить это знание в архиве.');
- await say('Мне важны регулярные сигналы: внимание, интерес, прикосновения, слова и инициатива.');
- await say('Не ежедневное доказательство любви в суде. Просто контакт ❤️');
-
- sys('<strong>КОММУНИКАЦИЯ</strong>');
- await say('Если ты занят или не вывозишь разговор, пауза нормальна. Мне не нужен ответ 24/7.');
- x=await choose([{t:'пропасть',bad:true},{t:'сказать, когда вернусь'}]);
- if(x==='пропасть'){await typing(900);await say('ты дурак что ли совсем 😭',300);await say('попробуй ещё раз');await choose([{t:'сказать, что мне нужна пауза'}])}
- await say('Пауза можно. Неизвестность нет.');
-
- let v=card('<h3>🎙 Голосовое сообщение <span class="small">0:04</span></h3><div class="voice"><button class="play">▶</button><div class="wave">▂▅▃▆▂▇▅▃▆▂▅▇▃▂▆</div><span>0:04</span></div>');
- await new Promise(res=>v.querySelector('.play').onclick=()=>{v.querySelector('.play').textContent='✓';sys('<strong>У ТЕБЯ TELEGRAM PREMIUM НЕ ДЛЯ КРАСИВЫХ СМАЙЛИКОВ 😭</strong>');res()});
- await say('Слушай мои голосовые. Читай сообщения. Особенно если я рассказываю, что меня задело.');
-
- sys('<strong>КОГДА МНЕ ПЛОХО</strong>');
- await say('Не стой рядом с проблемой. Будь рядом со мной.');
- await choose([{t:'помочь решить'},{t:'просто побыть рядом'}]);
- await say('Иногда первое, иногда второе. Поэтому существует гениальный вопрос: «тебе помочь решить или просто побыть рядом?»');
- await say('Если я тревожусь, не нужно подтверждать каждый мой страх. Но и «ты опять придумала хуйню» не помогает.');
- await say('Лучше: «я понимаю, почему тебя это задело. Вот что происходит на самом деле. Я рядом».');
-
- sys('<strong>FAN CLUB</strong>');
- await say('Я хочу знать, чем ты живёшь: проекты, мысли, что тебя радует и что беспокоит.');
- await say('Но я не хочу быть твоей фанаткой в собственных отношениях.');
- card('<h3>MEMBERSHIP</h3><div>Ксюша → Danya Fan Club <b style="float:right;color:var(--green)">ACTIVE</b></div><div style="margin-top:9px">Даня → Ksenia Fan Club <b style="float:right;color:var(--green)">ACTIVE ✓</b></div>');
- await say('Мы должны быть фанатами друг друга. Спрашивай про мой день, мысли, то, что я пишу, что меня волнует. Не допрос. Просто настоящий интерес.');
-
- sys('<strong>RELATIONSHIP MANAGER MODE</strong>');
- await say('Я не хочу постоянно спрашивать «увидимся?», «когда?», «куда пойдём?» и организовывать всё сама.');
- x=await choose([{t:'сам предложу свидание ❤️'},{t:'ну ты скажи когда',bad:true}]);if(x.includes('ты скажи'))await say('нет ❤️ теперь твоя очередь');
- await say('Кино, ресторан, прогулка, концерт, мероприятие, ночной город, поездка, спонтанная хрень. Мне нужны общие воспоминания, не только переписка и диван Premium.');
- await say('И иногда бери меня с собой. Познакомь со своими людьми. Я не хочу захватывать твой социальный круг. Я хочу существовать в твоей реальной жизни.');
-
- sys('<strong>MEDIA BOY MODE</strong>');
- await say('Я понимаю, что ты медийный человек. Работа, аудитория, знакомства и девушки вокруг не исчезнут.');
- await say('Я не хочу контролировать каждый лайк. Но не хочу чувствовать себя менее замеченной собственным мужчиной, чем посторонние девушки.');
- await say('Если что-то выглядит неоднозначно и связано с работой, дай контекст. Не оставляй пустоту, которую мой мозг радостно заполнит сериалом на 14 серий.');
- c=card('<h3>STATUS SETTINGS</h3><div class="split"><span>Медийность</span><b style="color:var(--green)">ON</b></div><div class="split" style="margin-top:12px"><span>Вести себя как холостой</span><button class="blackbtn" id="single">OFF</button></div>');
- c.querySelector('#single').onclick=()=>sys('<strong>Функция несовместима с подпиской OFFICIALLY.</strong><br>Single mode применяется к обоим аккаунтам.');
-
- sys('<strong>OFFICIALLY MEANS OFFICIALLY</strong>');
- await say('Друзья, работа, обычное общение и профессиональные контакты — нормально.');
- await say('Флирт, романтические подкаты, сексуальный контекст и публичный образ свободного ловеласа — нет.');
- await say('Если конкретная ситуация с девушкой меня беспокоит, мне нужна прозрачность и понятная граница, а не бесконечный суд с доказательствами.');
- await say('И всё это работает в обе стороны. Какая неожиданная концепция взаимности.');
-
- c=card('<h3>БЫВШИЕ</h3><div class="split"><span>Прошлые отношения</span><button class="blackbtn" id="arc">ARCHIVE</button></div><div class="small" style="margin-top:10px">archive ≠ new season</div>');
- await new Promise(res=>c.querySelector('#arc').onclick=()=>{c.querySelector('#arc').textContent='✓ archived';res()});
- await say('Прошлое может существовать. Новую эмоциональную вселенную с прошлым строить не надо.');
-
- sys('<strong>CHEMISTRY ≠ RELATIONSHIP</strong>');
- await say('Мне важны влечение, страсть и секс. Очень.');
- await say('Но одной химии мне недостаточно.');
- card('<div class="pills"><span class="pill">🔥 химия</span><span class="pill">ясность</span><span class="pill">стабильность</span><span class="pill">действия</span><span class="pill">близость</span></div>');
- await say('И секс для меня начинается не в спальне. Взгляд, слова, прикосновения, инициатива. Мне важно чувствовать, что ты хочешь именно меня.');
- await say('Хороший секс для меня всегда совместный: желание + доверие + внимание к реакциям друг друга.');
-
- sys('<strong>МЕЛОЧИ = НЕ МЕЛОЧИ</strong>');
- await say('Я очень замечаю маленькие проявления заботы.');
- await say('«ты устала?», «я возьму», «доехала?», «не торопись», вкусняшка, цветы, маленький сюрприз, что-то увидел и вспомнил обо мне.');
- await say('Мне не обязательно нужен дорогой жест. Мне важно «я подумал о тебе» ❤️');
-
- sys('<strong>ФИНАНСЫ</strong>');
- await say('Для меня отношения не бухгалтерия 50/50. Когда мужчина зовёт и организует совместный выход, мне нравится, когда он берёт оплату на себя.');
- await say('Если что-то организовала я, я могу заплатить сама. В общей жизни большие вещи обсуждаем. Я тоже вкладываюсь в отношения, просто моя модель не про деление каждого чека калькулятором.');
-
- sys('<strong>FUTURE.EXE</strong>');
- await say('Когда я люблю человека, мой мозг автоматически начинает представлять будущее рядом с ним.');
- await choose([{t:'показать масштаб бедствия'}]);
- card('<div style="font-size:31px;line-height:1.8;text-align:center">🏠 💍 👶 ✈️<br>👗 🤵 🐈 👵🏻👴🏻</div><div class="small" style="text-align:center">Даня, спокойно. Дом завтра покупать не надо.</div>');
- await say('Это не дедлайн и не требование кольца завтра. Для меня серьёзные отношения просто потенциально ведут к семье.');
-
- sys('<strong>RECIPROCITY CHECK</strong>');
- await say('Мои чувства не важнее твоих. Мои границы не важнее твоих. Мои потребности не важнее твоих.');
- await say('Я прошу много не потому, что собираюсь давать мало.');
- await say('Я хочу интересоваться тобой, поддерживать, радовать, быть рядом и любить тебя так, как нужно именно тебе.');
- await say('Но я могу подробно объяснить Ksenia OS...');
- await say('а инструкцию к Danya OS мне никто не выдал 😭');
-
- sys('<strong>Ксюша перестала печатать.</strong>');await sleep(650);sys('<strong>ТЕПЕРЬ ТВОЯ ОЧЕРЕДЬ.</strong>');
- await say('Не копи на меня папку. Я не хочу однажды услышать «меня давно всё это бесило, просто я не говорил».');
- await say('Если я делаю что-то не так, скажи. Я могу расстроиться и внутренне открыть Верховный суд, но мне важнее знать правду.');
- const qs=['Что заставляет тебя чувствовать себя любимым?','Что я делаю такого, что тебя задевает?','Какие у тебя красные флаги в отношениях?','Чего тебе от меня нужно больше? А чего меньше?','Как с тобой лучше разговаривать во время конфликта?','Есть ли что-то, что тебя уже беспокоит, но ты мне не говорил?'];
- let ans=[];
- for(const q of qs){let d=card('<h3>'+q+'</h3><textarea placeholder="Напиши честно. Я хочу это знать."></textarea><button class="send">Отправить</button>');await new Promise(res=>d.querySelector('.send').onclick=()=>{let z=d.querySelector('textarea').value.trim();if(!z){d.querySelector('textarea').focus();return}ans.push({question:q,answer:z});d.querySelector('textarea').disabled=true;d.querySelector('.send').disabled=true;d.querySelector('.send').textContent='✓ отправлено';res()})}
- try{localStorage.setItem('DanyaOS',JSON.stringify(ans))}catch(e){}
- sys('<strong>DANYA OS successfully connected ●</strong>');
- await say('Теперь у меня тоже есть инструкция.');
- await say('Потому что я не хочу только объяснять тебе, как любить меня. Я хочу знать, как правильно любить тебя. ❤️');
-
- sys('<strong>И последнее.</strong>');
- await say('Я очень стараюсь. Потому что люблю тебя.');
- await say('Я не хочу идеальных отношений. Я хочу тёплые, взаимные, красивые и нормальные человеческие отношения.');
- await say('Я не прошу читать мои мысли. Я прошу слышать меня.');
- await say('И всё, что написано здесь, работает в обе стороны.');
- await choose([{t:'условия прочитаны ❤️'}]);
- sys('<strong>KSENIA ↔ DANYA</strong><br>connection established <span style="color:var(--green)">●</span>');
- await say('Ну вот. Теперь ты немного лучше знаешь, кого именно забрал.');
- await say('officially ❤️');
- sys('Terms & Conditions могут обновляться. Люди, к сожалению, тоже обновляются. Поэтому разговариваем.');
- await say('а кушать будем? 😭');await choose([{t:'да'},{t:'конечно'}]);await say('правильный ответ');
- await say('а секс у нас будет? 🤨');await choose([{t:'да ❤️'}]);await say('отлично. раздел «секс начинается не в спальне» ты уже прочитал 😌');
- sys('<strong>THE END ❤️</strong><br><span class="small">Отменить подписку через интерфейс нельзя. Скриншоты «забираю тебя» сохранены.</span>');
-}
-document.querySelector('#open').onclick=()=>{let s=document.querySelector('#splash');s.style.opacity=0;setTimeout(()=>{s.remove();run()},350)};
+const sleep=m=>new Promise(r=>setTimeout(r,m));
+const toast=t=>{let x=document.querySelector('#toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2200)};
+document.querySelector('#open').onclick=async()=>{let s=document.querySelector('#splash');s.style.opacity=0;setTimeout(()=>s.remove(),350)};
+let love=34;
+document.querySelectorAll('#loveActions .action').forEach(b=>b.onclick=()=>{if(b.disabled)return;b.disabled=true;b.textContent='✓ '+b.textContent;love=Math.min(100,love+Number(b.dataset.n));document.querySelector('#loveN').textContent=love+'%';document.querySelector('#loveBar').style.width=love+'%'});
+document.querySelector('#voice').onclick=async()=>{let box=document.querySelector('#voiceResult');document.querySelector('#voice').disabled=true;box.innerHTML='<div class="typing"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>';await sleep(700);box.innerHTML='<div class="row"><div class="bubble"><b>У ТЕБЯ TELEGRAM PREMIUM НЕ ДЛЯ КРАСИВЫХ СМАЙЛИКОВ 😭</b></div></div>'};
+document.querySelector('#single').onclick=()=>{document.querySelector('#singleMsg').innerHTML='<br><b>Эта функция несовместима с подпиской OFFICIALLY.</b><br>Single mode применяется к обоим аккаунтам.';toast('ДАНЯ, НЕ ПОЗОРЬСЯ 💀')};
+const questions=['Что заставляет тебя чувствовать себя любимым?','Что я делаю такого, что тебя задевает?','Какие у тебя красные флаги в отношениях?','Чего тебе от меня нужно больше? А чего меньше?','Как с тобой лучше разговаривать во время конфликта?','Есть ли что-то, что тебя уже беспокоит, но ты мне не говорил?'];
+let forms=document.querySelector('#forms');questions.forEach((q,i)=>{let d=document.createElement('div');d.className='formcard';d.innerHTML=`<label>${q}</label><textarea data-q="${i}" placeholder="Напиши честно. Я хочу это знать."></textarea>`;forms.append(d)});
+try{let old=JSON.parse(localStorage.getItem('DanyaOS')||'[]');old.forEach((x,i)=>{let t=document.querySelector(`textarea[data-q="${i}"]`);if(t)t.value=x.answer||''})}catch(e){}
+document.querySelector('#save').onclick=()=>{let data=questions.map((q,i)=>({question:q,answer:document.querySelector(`textarea[data-q="${i}"]`).value.trim()}));try{localStorage.setItem('DanyaOS',JSON.stringify(data))}catch(e){}document.querySelector('#saved').textContent='DANYA OS successfully connected ●';toast('ответы сохранены на этом устройстве ❤️')};
+document.querySelector('#food').onclick=()=>{document.querySelector('#food').disabled=true;let b=document.createElement('div');b.className='row me';b.innerHTML='<div class="bubble">конечно</div>';document.querySelector('#finalChat').append(b);toast('правильный ответ ❤️')};
+document.querySelector('#sex').onclick=()=>{document.querySelector('#sex').disabled=true;let b=document.createElement('div');b.className='row me';b.innerHTML='<div class="bubble">да ❤️</div>';document.querySelector('#finalChat').append(b);toast('сначала перечитай «секс начинается не в спальне» 😌')};
 </script>
 </body>
 </html>
